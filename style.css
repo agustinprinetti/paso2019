@@ -1,0 +1,29 @@
+/* Whole document: */
+body{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12pt;
+}
+/* Headers */
+h1,h2,h3,h4,h5,h6{
+  font-family: 'Merriweather', serif;
+  font-size: 24pt;
+}
+
+.col2 {
+    columns: 2 200px;         /* number of columns and width in pixels*/
+    -webkit-columns: 2 200px; /* chrome, safari */
+    -moz-columns: 2 200px;    /* firefox */
+  }
+
+img.centered
+{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-left: -200px; /* Width of image /2 */
+  margin-top: -25px; /* Height of image /2 */
+  z-index: 999;
+  pointer-events: none;
+  user-select: none;
+  opacity: 0.5;
+}

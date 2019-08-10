@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>Monitor Electoral</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/yeti.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<script src="site_libs/htmlwidgets-1.3/htmlwidgets.js"></script>
+<script src="site_libs/plotly-binding-4.9.0/plotly.js"></script>
+<script src="site_libs/typedarray-0.1/typedarray.min.js"></script>
+<link href="site_libs/crosstalk-1.0.0/css/crosstalk.css" rel="stylesheet" />
+<script src="site_libs/crosstalk-1.0.0/js/crosstalk.min.js"></script>
+<link href="site_libs/plotly-htmlwidgets-css-1.46.1/plotly-htmlwidgets.css" rel="stylesheet" />
+<script src="site_libs/plotly-main-1.46.1/plotly-latest.min.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 45px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 50px;
+  margin-top: -50px;
+}
+.section h2 {
+  padding-top: 50px;
+  margin-top: -50px;
+}
+.section h3 {
+  padding-top: 50px;
+  margin-top: -50px;
+}
+.section h4 {
+  padding-top: 50px;
+  margin-top: -50px;
+}
+.section h5 {
+  padding-top: 50px;
+  margin-top: -50px;
+}
+.section h6 {
+  padding-top: 50px;
+  margin-top: -50px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Monitor Electoral</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Escrutinio</a>
+</li>
+<li>
+  <a href="about.html">Congreso</a>
+</li>
+<li>
+  <a href="about.html">Especial aborto</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="https://ctt.ac/UHd4Z">
+    <span class="fa fa-twitter fa-lg"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="JavaScript: location.reload(true);">
+    <span class="fa fa-redo-alt"></span>
+     
+      Actualizar
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Monitor Electoral</h1>
+
+</div>
+
+
+<p><img class="centered" src="https://i.imgur.com/298Qmdn.png"/></p>
+<p>Hello, Website! Welcome to the world. <br> <br></p>
+<div id="progresion-del-escrutinio" class="section level2 tabset tabset-fade">
+<h2>Progresión del escrutinio</h2>
+<div id="nacion" class="section level3">
+<h3>Nación</h3>
+<center>
+<div id="htmlwidget-27be6db29329b05acf60" style="width:672px;height:400px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-27be6db29329b05acf60">{"x":{"data":[{"x":[1565553600,1565557200,1565560800,1565564400,1565568000,1565571600,1565575200,1565578800,1565582400,1565586000,1565589600,1565593200],"y":[0.25,0.24,0.23,0.22,0.21,0.2,0.19,0.18,0.17,0.16,0.15,0.14],"text":["Hora: 20:00 <br />Escrutado: 25 %","Hora: 21:00 <br />Escrutado: 24 %","Hora: 22:00 <br />Escrutado: 23 %","Hora: 23:00 <br />Escrutado: 22 %","Hora: 00:00 <br />Escrutado: 21 %","Hora: 01:00 <br />Escrutado: 20 %","Hora: 02:00 <br />Escrutado: 19 %","Hora: 03:00 <br />Escrutado: 18 %","Hora: 04:00 <br />Escrutado: 17 %","Hora: 05:00 <br />Escrutado: 16 %","Hora: 06:00 <br />Escrutado: 15 %","Hora: 07:00 <br />Escrutado: 14 %"],"type":"scatter","mode":"markers+lines","marker":{"autocolorscale":false,"color":"rgba(169,169,169,1)","opacity":1,"size":5.66929133858268,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(169,169,169,1)"}},"hoveron":"points","name":"Escrutado","legendgroup":"Escrutado","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","line":{"width":3.77952755905512,"color":"rgba(169,169,169,1)","dash":"solid"},"frame":null}],"layout":{"margin":{"t":40.5479452054795,"r":7.30593607305936,"b":54.5022831050228,"l":48.9497716894977},"font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[1565546400,1565596800],"tickmode":"array","ticktext":["18:00","20:00","22:00","00:00","02:00","04:00","06:00","08:00"],"tickvals":[1565546400,1565553600,1565560800,1565568000,1565575200,1565582400,1565589600,1565596800],"categoryorder":"array","categoryarray":["18:00","20:00","22:00","00:00","02:00","04:00","06:00","08:00"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.65296803652968,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0.66417600664176,"zeroline":false,"anchor":"y","title":{"text":"Hora","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-0.05,1.05],"tickmode":"array","ticktext":["0%","20%","40%","60%","80%","100%"],"tickvals":[0,0.2,0.4,0.6,0.8,1],"categoryorder":"array","categoryarray":["0%","20%","40%","60%","80%","100%"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.65296803652968,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0.66417600664176,"zeroline":false,"anchor":"x","title":{"text":"Porcentaje escrutado","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":true,"legend":{"bgcolor":null,"bordercolor":null,"borderwidth":0,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.689497716895},"y":1.1,"orientation":"h","x":0.01},"annotations":[{"text":"colour","x":1.02,"y":1,"showarrow":false,"ax":0,"ay":0,"font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"xref":"paper","yref":"paper","textangle":-0,"xanchor":"left","yanchor":"bottom","legendTitle":true}],"hovermode":"closest","height":400,"barmode":"relative"},"config":{"doubleClick":"reset","showSendToCloud":false,"displayModeBar":false},"source":"A","attrs":{"2c242f151b25":{"y":{},"colour":{},"x":{},"text":{},"type":"scatter"},"2c245f935a1":{"y":{},"colour":{},"x":{},"text":{}}},"cur_data":"2c242f151b25","visdat":{"2c242f151b25":["function (y) ","x"],"2c245f935a1":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</center>
+</div>
+<div id="pba" class="section level3">
+<h3>PBA</h3>
+<center>
+<div id="htmlwidget-c0297f413b7a44ba8c86" style="width:672px;height:400px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-c0297f413b7a44ba8c86">{"x":{"data":[{"x":[1565553600,1565557200,1565560800,1565564400,1565568000,1565571600,1565575200,1565578800,1565582400,1565586000,1565589600,1565593200],"y":[0.25,0.24,0.23,0.22,0.21,0.2,0.19,0.18,0.17,0.16,0.15,0.14],"text":["Hora: 20:00 <br />Escrutado: 25 %","Hora: 21:00 <br />Escrutado: 24 %","Hora: 22:00 <br />Escrutado: 23 %","Hora: 23:00 <br />Escrutado: 22 %","Hora: 00:00 <br />Escrutado: 21 %","Hora: 01:00 <br />Escrutado: 20 %","Hora: 02:00 <br />Escrutado: 19 %","Hora: 03:00 <br />Escrutado: 18 %","Hora: 04:00 <br />Escrutado: 17 %","Hora: 05:00 <br />Escrutado: 16 %","Hora: 06:00 <br />Escrutado: 15 %","Hora: 07:00 <br />Escrutado: 14 %"],"type":"scatter","mode":"markers+lines","marker":{"autocolorscale":false,"color":"rgba(169,169,169,1)","opacity":1,"size":5.66929133858268,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(169,169,169,1)"}},"hoveron":"points","name":"Escrutado","legendgroup":"Escrutado","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","line":{"width":3.77952755905512,"color":"rgba(169,169,169,1)","dash":"solid"},"frame":null}],"layout":{"margin":{"t":40.5479452054795,"r":7.30593607305936,"b":54.5022831050228,"l":48.9497716894977},"font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[1565546400,1565596800],"tickmode":"array","ticktext":["18:00","20:00","22:00","00:00","02:00","04:00","06:00","08:00"],"tickvals":[1565546400,1565553600,1565560800,1565568000,1565575200,1565582400,1565589600,1565596800],"categoryorder":"array","categoryarray":["18:00","20:00","22:00","00:00","02:00","04:00","06:00","08:00"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.65296803652968,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0.66417600664176,"zeroline":false,"anchor":"y","title":{"text":"Hora","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-0.05,1.05],"tickmode":"array","ticktext":["0%","20%","40%","60%","80%","100%"],"tickvals":[0,0.2,0.4,0.6,0.8,1],"categoryorder":"array","categoryarray":["0%","20%","40%","60%","80%","100%"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.65296803652968,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0.66417600664176,"zeroline":false,"anchor":"x","title":{"text":"Porcentaje escrutado","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":true,"legend":{"bgcolor":null,"bordercolor":null,"borderwidth":0,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.689497716895},"y":1.1,"orientation":"h","x":0.01},"annotations":[{"text":"colour","x":1.02,"y":1,"showarrow":false,"ax":0,"ay":0,"font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"xref":"paper","yref":"paper","textangle":-0,"xanchor":"left","yanchor":"bottom","legendTitle":true}],"hovermode":"closest","height":400,"barmode":"relative"},"config":{"doubleClick":"reset","showSendToCloud":false,"displayModeBar":false},"source":"A","attrs":{"2c243817352a":{"y":{},"colour":{},"x":{},"text":{},"type":"scatter"},"2c2473684500":{"y":{},"colour":{},"x":{},"text":{}}},"cur_data":"2c243817352a","visdat":{"2c243817352a":["function (y) ","x"],"2c2473684500":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</center>
+</div>
+<div id="caba" class="section level3">
+<h3>CABA</h3>
+<center>
+<div id="htmlwidget-6bd30ecc9839cb7929e6" style="width:672px;height:400px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-6bd30ecc9839cb7929e6">{"x":{"data":[{"x":[1565553600,1565557200,1565560800,1565564400,1565568000,1565571600,1565575200,1565578800,1565582400,1565586000,1565589600,1565593200],"y":[0.25,0.24,0.23,0.22,0.21,0.2,0.19,0.18,0.17,0.16,0.15,0.14],"text":["Hora: 20:00 <br />Escrutado: 25 %","Hora: 21:00 <br />Escrutado: 24 %","Hora: 22:00 <br />Escrutado: 23 %","Hora: 23:00 <br />Escrutado: 22 %","Hora: 00:00 <br />Escrutado: 21 %","Hora: 01:00 <br />Escrutado: 20 %","Hora: 02:00 <br />Escrutado: 19 %","Hora: 03:00 <br />Escrutado: 18 %","Hora: 04:00 <br />Escrutado: 17 %","Hora: 05:00 <br />Escrutado: 16 %","Hora: 06:00 <br />Escrutado: 15 %","Hora: 07:00 <br />Escrutado: 14 %"],"type":"scatter","mode":"markers+lines","marker":{"autocolorscale":false,"color":"rgba(169,169,169,1)","opacity":1,"size":5.66929133858268,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(169,169,169,1)"}},"hoveron":"points","name":"Escrutado","legendgroup":"Escrutado","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","line":{"width":3.77952755905512,"color":"rgba(169,169,169,1)","dash":"solid"},"frame":null}],"layout":{"margin":{"t":40.5479452054795,"r":7.30593607305936,"b":54.5022831050228,"l":48.9497716894977},"font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[1565546400,1565596800],"tickmode":"array","ticktext":["18:00","20:00","22:00","00:00","02:00","04:00","06:00","08:00"],"tickvals":[1565546400,1565553600,1565560800,1565568000,1565575200,1565582400,1565589600,1565596800],"categoryorder":"array","categoryarray":["18:00","20:00","22:00","00:00","02:00","04:00","06:00","08:00"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.65296803652968,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0.66417600664176,"zeroline":false,"anchor":"y","title":{"text":"Hora","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-0.05,1.05],"tickmode":"array","ticktext":["0%","20%","40%","60%","80%","100%"],"tickvals":[0,0.2,0.4,0.6,0.8,1],"categoryorder":"array","categoryarray":["0%","20%","40%","60%","80%","100%"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.65296803652968,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0.66417600664176,"zeroline":false,"anchor":"x","title":{"text":"Porcentaje escrutado","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":true,"legend":{"bgcolor":null,"bordercolor":null,"borderwidth":0,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.689497716895},"y":1.1,"orientation":"h","x":0.01},"annotations":[{"text":"colour","x":1.02,"y":1,"showarrow":false,"ax":0,"ay":0,"font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"xref":"paper","yref":"paper","textangle":-0,"xanchor":"left","yanchor":"bottom","legendTitle":true}],"hovermode":"closest","height":400,"barmode":"relative"},"config":{"doubleClick":"reset","showSendToCloud":false,"displayModeBar":false},"source":"A","attrs":{"2c243e160cd":{"y":{},"colour":{},"x":{},"text":{},"type":"scatter"},"2c241c495a31":{"y":{},"colour":{},"x":{},"text":{}}},"cur_data":"2c243e160cd","visdat":{"2c243e160cd":["function (y) ","x"],"2c241c495a31":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</center>
+</div>
+</div>
+<div id="section" class="section level2">
+<h2></h2>
+</div>
+<div id="escrutado-por-distritos" class="section level2 tabset tabset-fade">
+<h2>Escrutado por distritos</h2>
+<div id="nacion-1" class="section level3">
+<h3>Nación</h3>
+<center>
+<div id="htmlwidget-e75c179d385066e4ddcb" style="width:672px;height:400px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-e75c179d385066e4ddcb">{"x":{"data":[{"orientation":"h","width":[0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5],"base":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"x":[0.147,0.1504,0.1724,0.2056,0.2134,0.227,0.2557,0.267,0.2797,0.2828,0.3093,0.3167,0.3181,0.3415,0.5061],"y":[1,2,3,4,6,9,10,11,12,13,14,15,16,19,24],"text":["En Sgo. del Estero se escrutó el 14.7 %","En Formosa se escrutó el 15.04 %","En Jujuy se escrutó el 17.24 %","En Salta se escrutó el 20.56 %","En Chubut se escrutó el 21.34 %","En Misiones se escrutó el 22.7 %","En Santa Cruz se escrutó el 25.57 %","En Tucumán se escrutó el 26.7 %","En Neuquén se escrutó el 27.97 %","En Chaco se escrutó el 28.28 %","En San Luis se escrutó el 30.93 %","En La Rioja se escrutó el 31.67 %","En Corrientes se escrutó el 31.81 %","En TOTAL PAÍS se escrutó el 34.15 %","En CABA se escrutó el 50.61 %"],"type":"bar","marker":{"autocolorscale":false,"color":"rgba(0,154,205,1)","line":{"width":1.88976377952756,"color":"transparent"}},"name":"Va ganando AF","legendgroup":"Va ganando AF","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"orientation":"h","width":[0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5],"base":[0,0,0,0,0,0,0,0,0,0],"x":[0.2076,0.219,0.2239,0.328,0.3359,0.3529,0.3582,0.3776,0.4081,0.5322],"y":[5,7,8,17,18,20,21,22,23,25],"text":["En San Juan se escrutó el 20.76 %","En T. del Fuego se escrutó el 21.9 %","En Río Negro se escrutó el 22.39 %","En Buenos Aires se escrutó el 32.8 %","En La Pampa se escrutó el 33.59 %","En Santa Fe se escrutó el 35.29 %","En Catamarca se escrutó el 35.82 %","En Entre Ríos se escrutó el 37.76 %","En Mendoza se escrutó el 40.81 %","En Córdoba se escrutó el 53.22 %"],"type":"bar","marker":{"autocolorscale":false,"color":"rgba(255,185,15,1)","line":{"width":1.88976377952756,"color":"transparent"}},"name":"Va ganando MM","legendgroup":"Va ganando MM","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":40.5479452054795,"r":7.30593607305936,"b":39.8904109589041,"l":98.6301369863014},"font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-0.05,1.05],"tickmode":"array","ticktext":["0%","20%","40%","60%","80%","100%"],"tickvals":[0,0.2,0.4,0.6,0.8,1],"categoryorder":"array","categoryarray":["0%","20%","40%","60%","80%","100%"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.65296803652968,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"y","title":{"text":"","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.4,25.6],"tickmode":"array","ticktext":["Sgo. del Estero","Formosa","Jujuy","Salta","San Juan","Chubut","T. del Fuego","Río Negro","Misiones","Santa Cruz","Tucumán","Neuquén","Chaco","San Luis","La Rioja","Corrientes","Buenos Aires","La Pampa","TOTAL PAÍS","Santa Fe","Catamarca","Entre Ríos","Mendoza","CABA","Córdoba"],"tickvals":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25],"categoryorder":"array","categoryarray":["Sgo. del Estero","Formosa","Jujuy","Salta","San Juan","Chubut","T. del Fuego","Río Negro","Misiones","Santa Cruz","Tucumán","Neuquén","Chaco","San Luis","La Rioja","Corrientes","Buenos Aires","La Pampa","TOTAL PAÍS","Santa Fe","Catamarca","Entre Ríos","Mendoza","CABA","Córdoba"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.65296803652968,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"x","title":{"text":"","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":true,"legend":{"bgcolor":null,"bordercolor":null,"borderwidth":0,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.689497716895},"y":1.1,"orientation":"h","x":0.01},"hovermode":"closest","height":400,"barmode":"relative"},"config":{"doubleClick":"reset","showSendToCloud":false,"displayModeBar":false},"source":"A","attrs":{"2c2429bce1b":{"x":{},"y":{},"fill":{},"text":{},"type":"bar"}},"cur_data":"2c2429bce1b","visdat":{"2c2429bce1b":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</center>
+</div>
+<div id="pba-1" class="section level3">
+<h3>PBA</h3>
+<center>
+<div id="htmlwidget-e0d4a6c5aeffe3649718" style="width:672px;height:400px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-e0d4a6c5aeffe3649718">{"x":{"data":[{"orientation":"h","width":[0.5,0.5,0.5,0.5],"base":[0,0,0,0],"x":[0.2134,0.2828,0.3181,0.5061],"y":[1,2,3,7],"text":["En la Sección 5° se escrutó el 21.34 %","En la Sección 4° se escrutó el 28.28 %","En la Sección 7° se escrutó el 31.81 %","En la Sección 2° se escrutó el 50.61 %"],"type":"bar","marker":{"autocolorscale":false,"color":"rgba(0,154,205,1)","line":{"width":1.88976377952756,"color":"transparent"}},"name":"Va ganando AK","legendgroup":"Va ganando AK","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"orientation":"h","width":[0.5,0.5,0.5,0.5],"base":[0,0,0,0],"x":[0.328,0.3582,0.3776,0.5322],"y":[4,5,6,8],"text":["En la Sección 1° se escrutó el 32.8 %","En la Sección 3° se escrutó el 35.82 %","En la Sección Capital se escrutó el 37.76 %","En la Sección 6° se escrutó el 53.22 %"],"type":"bar","marker":{"autocolorscale":false,"color":"rgba(255,185,15,1)","line":{"width":1.88976377952756,"color":"transparent"}},"name":"Va ganando MEV","legendgroup":"Va ganando MEV","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":40.5479452054795,"r":7.30593607305936,"b":39.8904109589041,"l":98.6301369863014},"font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-0.05,1.05],"tickmode":"array","ticktext":["0%","20%","40%","60%","80%","100%"],"tickvals":[0,0.2,0.4,0.6,0.8,1],"categoryorder":"array","categoryarray":["0%","20%","40%","60%","80%","100%"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.65296803652968,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"y","title":{"text":"","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.4,8.6],"tickmode":"array","ticktext":["Sección 5°","Sección 4°","Sección 7°","Sección 1°","Sección 3°","Sección Capital","Sección 2°","Sección 6°"],"tickvals":[1,2,3,4,5,6,7,8],"categoryorder":"array","categoryarray":["Sección 5°","Sección 4°","Sección 7°","Sección 1°","Sección 3°","Sección Capital","Sección 2°","Sección 6°"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.65296803652968,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"x","title":{"text":"","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":true,"legend":{"bgcolor":null,"bordercolor":null,"borderwidth":0,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.689497716895},"y":1.1,"orientation":"h","x":0.01},"hovermode":"closest","height":400,"barmode":"relative","images":[{"source":"https://i.ibb.co/txQ90L8/provincia.png","xref":"paper","yref":"paper","x":0.8,"y":1,"sizex":0.4,"sizey":0.4,"opacity":0.5}]},"config":{"doubleClick":"reset","showSendToCloud":false,"displayModeBar":false},"source":"A","attrs":{"2c24168271a7":{"x":{},"y":{},"fill":{},"text":{},"type":"bar"}},"cur_data":"2c24168271a7","visdat":{"2c24168271a7":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</center>
+</div>
+<div id="caba-1" class="section level3">
+<h3>CABA</h3>
+<center>
+<div id="htmlwidget-9a8994f68fe61d57cb75" style="width:672px;height:400px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-9a8994f68fe61d57cb75">{"x":{"data":[{"orientation":"h","width":[0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5],"base":[0,0,0,0,0,0,0,0],"x":[0.1504,0.2134,0.3181,0.3181,0.328,0.3359,0.3582,0.4081],"y":[1,3,7,8,9,10,11,13],"text":["En la Comuna 9 se escrutó el 15.04 %","En la Comuna 5 se escrutó el 21.34 %","En la Comuna 15 se escrutó el 31.81 %","En la Comuna 7 se escrutó el 31.81 %","En la Comuna 1 se escrutó el 32.8 %","En la Comuna 11 se escrutó el 33.59 %","En la Comuna 3 se escrutó el 35.82 %","En la Comuna 13 se escrutó el 40.81 %"],"type":"bar","marker":{"autocolorscale":false,"color":"rgba(255,185,15,1)","line":{"width":1.88976377952756,"color":"transparent"}},"name":"Va ganando HRL","legendgroup":"Va ganando HRL","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"orientation":"h","width":[0.5,0.5,0.5,0.5,0.5,0.5,0.5],"base":[0,0,0,0,0,0,0],"x":[0.1724,0.227,0.2828,0.3167,0.3776,0.5061,0.5322],"y":[2,4,5,6,12,14,15],"text":["En la Comuna 10 se escrutó el 17.24 %","En la Comuna 14 se escrutó el 22.7 %","En la Comuna 4 se escrutó el 28.28 %","En la Comuna 12 se escrutó el 31.67 %","En la Comuna 8 se escrutó el 37.76 %","En la Comuna 2 se escrutó el 50.61 %","En la Comuna 6 se escrutó el 53.22 %"],"type":"bar","marker":{"autocolorscale":false,"color":"rgba(0,154,205,1)","line":{"width":1.88976377952756,"color":"transparent"}},"name":"Va ganando ML","legendgroup":"Va ganando ML","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":40.5479452054795,"r":7.30593607305936,"b":39.8904109589041,"l":63.5616438356165},"font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-0.05,1.05],"tickmode":"array","ticktext":["0%","20%","40%","60%","80%","100%"],"tickvals":[0,0.2,0.4,0.6,0.8,1],"categoryorder":"array","categoryarray":["0%","20%","40%","60%","80%","100%"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.65296803652968,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"y","title":{"text":"","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.4,15.6],"tickmode":"array","ticktext":["Comuna 9","Comuna 10","Comuna 5","Comuna 14","Comuna 4","Comuna 12","Comuna 15","Comuna 7","Comuna 1","Comuna 11","Comuna 3","Comuna 8","Comuna 13","Comuna 2","Comuna 6"],"tickvals":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15],"categoryorder":"array","categoryarray":["Comuna 9","Comuna 10","Comuna 5","Comuna 14","Comuna 4","Comuna 12","Comuna 15","Comuna 7","Comuna 1","Comuna 11","Comuna 3","Comuna 8","Comuna 13","Comuna 2","Comuna 6"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.65296803652968,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"x","title":{"text":"","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":true,"legend":{"bgcolor":null,"bordercolor":null,"borderwidth":0,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.689497716895},"y":1.1,"orientation":"h","x":0.01},"hovermode":"closest","height":400,"barmode":"relative","images":[{"source":"https://i.ibb.co/GQr42DK/caba.png","xref":"paper","yref":"paper","x":0.8,"y":1,"sizex":0.35,"sizey":0.35,"opacity":0.4}]},"config":{"doubleClick":"reset","showSendToCloud":false,"displayModeBar":false},"source":"A","attrs":{"2c244f8741e3":{"x":{},"y":{},"fill":{},"text":{},"type":"bar"}},"cur_data":"2c244f8741e3","visdat":{"2c244f8741e3":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</center>
+</div>
+</div>
+<div id="section-1" class="section level2">
+<h2></h2>
+</div>
+<div id="progresion-de-la-diferencia-entre-jxc-y-todos" class="section level2 tabset tabset-fade">
+<h2>Progresión de la diferencia entre JxC y TODOS</h2>
+<div id="nacion-2" class="section level3">
+<h3>Nación</h3>
+<center>
+<div id="htmlwidget-48cf31579077df76f54f" style="width:672px;height:350px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-48cf31579077df76f54f">{"x":{"data":[{"x":[1565553600,1565557200,1565560800,1565564400,1565568000,1565571600,1565575200,1565578800,1565582400,1565586000,1565589600,1565593200],"y":[0.34,0.35,0.34,0.35,0.36,0.38,0.4,0.41,0.415,0.42,0.426,0.431],"text":["Hora: 20:00 <br />Brecha: 9 puntos","Hora: 21:00 <br />Brecha: 11 puntos","Hora: 22:00 <br />Brecha: 11 puntos","Hora: 23:00 <br />Brecha: 13 puntos","Hora: 00:00 <br />Brecha: 15 puntos","Hora: 01:00 <br />Brecha: 18 puntos","Hora: 02:00 <br />Brecha: 21 puntos","Hora: 03:00 <br />Brecha: 23 puntos","Hora: 04:00 <br />Brecha: 24.5 puntos","Hora: 05:00 <br />Brecha: 26 puntos","Hora: 06:00 <br />Brecha: 27.6 puntos","Hora: 07:00 <br />Brecha: 29.1 puntos"],"type":"scatter","mode":"markers+lines","marker":{"autocolorscale":false,"color":"rgba(255,185,15,1)","opacity":1,"size":5.66929133858268,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(255,185,15,1)"}},"hoveron":"points","name":"MM","legendgroup":"MM","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","line":{"width":3.77952755905512,"color":"rgba(255,185,15,1)","dash":"solid"},"frame":null},{"x":[1565553600,1565557200,1565560800,1565564400,1565568000,1565571600,1565575200,1565578800,1565582400,1565586000,1565589600,1565593200],"y":[0.25,0.24,0.23,0.22,0.21,0.2,0.19,0.18,0.17,0.16,0.15,0.14],"text":["Hora: 20:00 <br />Brecha: 9 puntos","Hora: 21:00 <br />Brecha: 11 puntos","Hora: 22:00 <br />Brecha: 11 puntos","Hora: 23:00 <br />Brecha: 13 puntos","Hora: 00:00 <br />Brecha: 15 puntos","Hora: 01:00 <br />Brecha: 18 puntos","Hora: 02:00 <br />Brecha: 21 puntos","Hora: 03:00 <br />Brecha: 23 puntos","Hora: 04:00 <br />Brecha: 24.5 puntos","Hora: 05:00 <br />Brecha: 26 puntos","Hora: 06:00 <br />Brecha: 27.6 puntos","Hora: 07:00 <br />Brecha: 29.1 puntos"],"type":"scatter","mode":"markers+lines","marker":{"autocolorscale":false,"color":"rgba(0,154,205,1)","opacity":1,"size":5.66929133858268,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(0,154,205,1)"}},"hoveron":"points","name":"AF","legendgroup":"AF","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","line":{"width":3.77952755905512,"color":"rgba(0,154,205,1)","dash":"solid"},"frame":null}],"layout":{"margin":{"t":44.0547945205479,"r":7.30593607305936,"b":58.0091324200913,"l":43.1050228310502},"font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[1565546400,1565596800],"tickmode":"array","ticktext":["18:00","20:00","22:00","00:00","02:00","04:00","06:00","08:00"],"tickvals":[1565546400,1565553600,1565560800,1565568000,1565575200,1565582400,1565589600,1565596800],"categoryorder":"array","categoryarray":["18:00","20:00","22:00","00:00","02:00","04:00","06:00","08:00"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.65296803652968,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0.66417600664176,"zeroline":false,"anchor":"y","title":{"text":"Hora","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.12545,0.44555],"tickmode":"array","ticktext":["15%","20%","25%","30%","35%","40%"],"tickvals":[0.15,0.2,0.25,0.3,0.35,0.4],"categoryorder":"array","categoryarray":["15%","20%","25%","30%","35%","40%"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.65296803652968,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0.66417600664176,"zeroline":false,"anchor":"x","title":{"text":"Porcentaje de votos","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":true,"legend":{"bgcolor":null,"bordercolor":null,"borderwidth":0,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.689497716895},"y":1.1,"orientation":"h","x":0.01},"annotations":[{"text":"colour","x":1.02,"y":1,"showarrow":false,"ax":0,"ay":0,"font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"xref":"paper","yref":"paper","textangle":-0,"xanchor":"left","yanchor":"bottom","legendTitle":true}],"hovermode":"closest","height":350,"barmode":"relative"},"config":{"doubleClick":"reset","showSendToCloud":false,"displayModeBar":false},"source":"A","attrs":{"2c24415f10fb":{"y":{},"colour":{},"x":{},"text":{},"type":"scatter"},"2c24362871d9":{"y":{},"colour":{},"x":{},"text":{}},"2c24167b57f9":{"y":{},"colour":{},"x":{},"text":{}},"2c246d675e85":{"y":{},"colour":{},"x":{},"text":{}}},"cur_data":"2c24415f10fb","visdat":{"2c24415f10fb":["function (y) ","x"],"2c24362871d9":["function (y) ","x"],"2c24167b57f9":["function (y) ","x"],"2c246d675e85":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</center>
+</div>
+<div id="pba-2" class="section level3">
+<h3>PBA</h3>
+<center>
+<div id="htmlwidget-fec9f12b15702f773845" style="width:672px;height:350px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-fec9f12b15702f773845">{"x":{"data":[{"x":[1565553600,1565557200,1565560800,1565564400,1565568000,1565571600,1565575200,1565578800,1565582400,1565586000,1565589600,1565593200],"y":[0.34,0.35,0.34,0.35,0.36,0.38,0.4,0.41,0.415,0.42,0.426,0.431],"text":["Hora: 20:00 <br />Brecha: 9 puntos","Hora: 21:00 <br />Brecha: 11 puntos","Hora: 22:00 <br />Brecha: 11 puntos","Hora: 23:00 <br />Brecha: 13 puntos","Hora: 00:00 <br />Brecha: 15 puntos","Hora: 01:00 <br />Brecha: 18 puntos","Hora: 02:00 <br />Brecha: 21 puntos","Hora: 03:00 <br />Brecha: 23 puntos","Hora: 04:00 <br />Brecha: 24.5 puntos","Hora: 05:00 <br />Brecha: 26 puntos","Hora: 06:00 <br />Brecha: 27.6 puntos","Hora: 07:00 <br />Brecha: 29.1 puntos"],"type":"scatter","mode":"markers+lines","marker":{"autocolorscale":false,"color":"rgba(255,185,15,1)","opacity":1,"size":5.66929133858268,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(255,185,15,1)"}},"hoveron":"points","name":"MEV","legendgroup":"MEV","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","line":{"width":3.77952755905512,"color":"rgba(255,185,15,1)","dash":"solid"},"frame":null},{"x":[1565553600,1565557200,1565560800,1565564400,1565568000,1565571600,1565575200,1565578800,1565582400,1565586000,1565589600,1565593200],"y":[0.25,0.24,0.23,0.22,0.21,0.2,0.19,0.18,0.17,0.16,0.15,0.14],"text":["Hora: 20:00 <br />Brecha: 9 puntos","Hora: 21:00 <br />Brecha: 11 puntos","Hora: 22:00 <br />Brecha: 11 puntos","Hora: 23:00 <br />Brecha: 13 puntos","Hora: 00:00 <br />Brecha: 15 puntos","Hora: 01:00 <br />Brecha: 18 puntos","Hora: 02:00 <br />Brecha: 21 puntos","Hora: 03:00 <br />Brecha: 23 puntos","Hora: 04:00 <br />Brecha: 24.5 puntos","Hora: 05:00 <br />Brecha: 26 puntos","Hora: 06:00 <br />Brecha: 27.6 puntos","Hora: 07:00 <br />Brecha: 29.1 puntos"],"type":"scatter","mode":"markers+lines","marker":{"autocolorscale":false,"color":"rgba(0,154,205,1)","opacity":1,"size":5.66929133858268,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(0,154,205,1)"}},"hoveron":"points","name":"AK","legendgroup":"AK","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","line":{"width":3.77952755905512,"color":"rgba(0,154,205,1)","dash":"solid"},"frame":null}],"layout":{"margin":{"t":44.0547945205479,"r":7.30593607305936,"b":58.0091324200913,"l":43.1050228310502},"font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[1565546400,1565596800],"tickmode":"array","ticktext":["18:00","20:00","22:00","00:00","02:00","04:00","06:00","08:00"],"tickvals":[1565546400,1565553600,1565560800,1565568000,1565575200,1565582400,1565589600,1565596800],"categoryorder":"array","categoryarray":["18:00","20:00","22:00","00:00","02:00","04:00","06:00","08:00"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.65296803652968,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0.66417600664176,"zeroline":false,"anchor":"y","title":{"text":"Hora","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.12545,0.44555],"tickmode":"array","ticktext":["15%","20%","25%","30%","35%","40%"],"tickvals":[0.15,0.2,0.25,0.3,0.35,0.4],"categoryorder":"array","categoryarray":["15%","20%","25%","30%","35%","40%"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.65296803652968,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0.66417600664176,"zeroline":false,"anchor":"x","title":{"text":"Porcentaje de votos","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":true,"legend":{"bgcolor":null,"bordercolor":null,"borderwidth":0,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.689497716895},"y":1.1,"orientation":"h","x":0.01},"annotations":[{"text":"colour","x":1.02,"y":1,"showarrow":false,"ax":0,"ay":0,"font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"xref":"paper","yref":"paper","textangle":-0,"xanchor":"left","yanchor":"bottom","legendTitle":true}],"hovermode":"closest","height":350,"barmode":"relative"},"config":{"doubleClick":"reset","showSendToCloud":false,"displayModeBar":false},"source":"A","attrs":{"2c2467102fb3":{"y":{},"colour":{},"x":{},"text":{},"type":"scatter"},"2c2449885b5b":{"y":{},"colour":{},"x":{},"text":{}},"2c2478e3f48":{"y":{},"colour":{},"x":{},"text":{}},"2c243dd6871":{"y":{},"colour":{},"x":{},"text":{}}},"cur_data":"2c2467102fb3","visdat":{"2c2467102fb3":["function (y) ","x"],"2c2449885b5b":["function (y) ","x"],"2c2478e3f48":["function (y) ","x"],"2c243dd6871":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</center>
+</div>
+<div id="caba-2" class="section level3">
+<h3>CABA</h3>
+<center>
+<div id="htmlwidget-66d3f2047d0666497bbb" style="width:672px;height:350px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-66d3f2047d0666497bbb">{"x":{"data":[{"x":[1565553600,1565557200,1565560800,1565564400,1565568000,1565571600,1565575200,1565578800,1565582400,1565586000,1565589600,1565593200],"y":[0.34,0.35,0.34,0.35,0.36,0.38,0.4,0.41,0.415,0.42,0.426,0.431],"text":["Hora: 20:00 <br />Brecha: 9 puntos","Hora: 21:00 <br />Brecha: 11 puntos","Hora: 22:00 <br />Brecha: 11 puntos","Hora: 23:00 <br />Brecha: 13 puntos","Hora: 00:00 <br />Brecha: 15 puntos","Hora: 01:00 <br />Brecha: 18 puntos","Hora: 02:00 <br />Brecha: 21 puntos","Hora: 03:00 <br />Brecha: 23 puntos","Hora: 04:00 <br />Brecha: 24.5 puntos","Hora: 05:00 <br />Brecha: 26 puntos","Hora: 06:00 <br />Brecha: 27.6 puntos","Hora: 07:00 <br />Brecha: 29.1 puntos"],"type":"scatter","mode":"markers+lines","marker":{"autocolorscale":false,"color":"rgba(255,185,15,1)","opacity":1,"size":5.66929133858268,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(255,185,15,1)"}},"hoveron":"points","name":"HRL","legendgroup":"HRL","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","line":{"width":3.77952755905512,"color":"rgba(255,185,15,1)","dash":"solid"},"frame":null},{"x":[1565553600,1565557200,1565560800,1565564400,1565568000,1565571600,1565575200,1565578800,1565582400,1565586000,1565589600,1565593200],"y":[0.25,0.24,0.23,0.22,0.21,0.2,0.19,0.18,0.17,0.16,0.15,0.14],"text":["Hora: 20:00 <br />Brecha: 9 puntos","Hora: 21:00 <br />Brecha: 11 puntos","Hora: 22:00 <br />Brecha: 11 puntos","Hora: 23:00 <br />Brecha: 13 puntos","Hora: 00:00 <br />Brecha: 15 puntos","Hora: 01:00 <br />Brecha: 18 puntos","Hora: 02:00 <br />Brecha: 21 puntos","Hora: 03:00 <br />Brecha: 23 puntos","Hora: 04:00 <br />Brecha: 24.5 puntos","Hora: 05:00 <br />Brecha: 26 puntos","Hora: 06:00 <br />Brecha: 27.6 puntos","Hora: 07:00 <br />Brecha: 29.1 puntos"],"type":"scatter","mode":"markers+lines","marker":{"autocolorscale":false,"color":"rgba(0,154,205,1)","opacity":1,"size":5.66929133858268,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(0,154,205,1)"}},"hoveron":"points","name":"ML","legendgroup":"ML","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","line":{"width":3.77952755905512,"color":"rgba(0,154,205,1)","dash":"solid"},"frame":null}],"layout":{"margin":{"t":44.0547945205479,"r":7.30593607305936,"b":58.0091324200913,"l":43.1050228310502},"font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[1565546400,1565596800],"tickmode":"array","ticktext":["18:00","20:00","22:00","00:00","02:00","04:00","06:00","08:00"],"tickvals":[1565546400,1565553600,1565560800,1565568000,1565575200,1565582400,1565589600,1565596800],"categoryorder":"array","categoryarray":["18:00","20:00","22:00","00:00","02:00","04:00","06:00","08:00"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.65296803652968,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0.66417600664176,"zeroline":false,"anchor":"y","title":{"text":"Hora","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.12545,0.44555],"tickmode":"array","ticktext":["15%","20%","25%","30%","35%","40%"],"tickvals":[0.15,0.2,0.25,0.3,0.35,0.4],"categoryorder":"array","categoryarray":["15%","20%","25%","30%","35%","40%"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.65296803652968,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0.66417600664176,"zeroline":false,"anchor":"x","title":{"text":"Porcentaje de votos","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":true,"legend":{"bgcolor":null,"bordercolor":null,"borderwidth":0,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.689497716895},"y":1.1,"orientation":"h","x":0.01},"annotations":[{"text":"colour","x":1.02,"y":1,"showarrow":false,"ax":0,"ay":0,"font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"xref":"paper","yref":"paper","textangle":-0,"xanchor":"left","yanchor":"bottom","legendTitle":true}],"hovermode":"closest","height":350,"barmode":"relative"},"config":{"doubleClick":"reset","showSendToCloud":false,"displayModeBar":false},"source":"A","attrs":{"2c2432c25e5f":{"y":{},"colour":{},"x":{},"text":{},"type":"scatter"},"2c2457604e46":{"y":{},"colour":{},"x":{},"text":{}},"2c243544780e":{"y":{},"colour":{},"x":{},"text":{}},"2c245b66655":{"y":{},"colour":{},"x":{},"text":{}}},"cur_data":"2c2432c25e5f","visdat":{"2c2432c25e5f":["function (y) ","x"],"2c2457604e46":["function (y) ","x"],"2c243544780e":["function (y) ","x"],"2c245b66655":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</center>
+</div>
+</div>
+<div id="section-2" class="section level2">
+<h2></h2>
+</div>
+<div id="comparacion-con-2015" class="section level2 tabset tabset-fade">
+<h2>Comparación con 2015</h2>
+<div id="paso-2019-vs.-paso-2015" class="section level3">
+<h3>PASO 2019 vs. PASO 2015</h3>
+<table style="width: 100%; border-collapse: collapse; border-color: #ffffff;" border="0" cellpadding="10">
+<tbody>
+<tr>
+<td style="width: 50%; text-align: center;">
+<img src="https://i.imgur.com/ypxsyB4.png">
+</td>
+<td style="width: 50%; text-align: center;">
+<img src="https://i.imgur.com/eBVIcZp.png">
+</td>
+</tr>
+<tr>
+<td style="width: 50%;; text-align: center;">
+<div id="htmlwidget-c6c21d89c6276bd3a74f" style="width:400px;height:400px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-c6c21d89c6276bd3a74f">{"x":{"data":[{"orientation":"h","width":[0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5],"base":[0,0,0,0,0,0,0,0,0,0,0,0,0,0],"x":[0.000799999999999995,0.0055,0.00799999999999998,0.0273,0.0439,0.0588,0.0759,0.0972,0.1041,0.1368,0.1402,0.1458,0.2162,0.301],"y":[12,13,14,15,16,17,18,19,20,21,22,23,24,25],"text":["Diferencia con 2015 en Salta = + 0.0799999999999995 puntos","Diferencia con 2015 en Formosa = + 0.55 puntos","Diferencia con 2015 en San Luis = + 0.799999999999998 puntos","Diferencia con 2015 en TOTAL PAÍS = + 2.73 puntos","Diferencia con 2015 en T. del Fuego = + 4.39 puntos","Diferencia con 2015 en Misiones = + 5.88 puntos","Diferencia con 2015 en Sgo. del Estero = + 7.59 puntos","Diferencia con 2015 en Santa Cruz = + 9.72 puntos","Diferencia con 2015 en Jujuy = + 10.41 puntos","Diferencia con 2015 en La Rioja = + 13.68 puntos","Diferencia con 2015 en Tucumán = + 14.02 puntos","Diferencia con 2015 en San Juan = + 14.58 puntos","Diferencia con 2015 en Buenos Aires = + 21.62 puntos","Diferencia con 2015 en Chubut = + 30.1 puntos"],"type":"bar","marker":{"autocolorscale":false,"color":"rgba(0,186,56,1)","line":{"width":1.88976377952756,"color":"transparent"}},"name":"mejor","legendgroup":"mejor","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"orientation":"h","width":[0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5],"base":[-0.1985,-0.1722,-0.1341,-0.1307,-0.1248,-0.0486,-0.0477,-0.0374,-0.0357,-0.0321,-0.0214],"x":[0.1985,0.1722,0.1341,0.1307,0.1248,0.0486,0.0477,0.0374,0.0357,0.0321,0.0214],"y":[1,2,3,4,5,6,7,8,9,10,11],"text":["Diferencia con 2015 en Entre Ríos =  -19.85 puntos","Diferencia con 2015 en Santa Fe =  -17.22 puntos","Diferencia con 2015 en Mendoza =  -13.41 puntos","Diferencia con 2015 en CABA =  -13.07 puntos","Diferencia con 2015 en Corrientes =  -12.48 puntos","Diferencia con 2015 en Neuquén =  -4.86 puntos","Diferencia con 2015 en Chaco =  -4.77 puntos","Diferencia con 2015 en La Pampa =  -3.74 puntos","Diferencia con 2015 en Córdoba =  -3.57 puntos","Diferencia con 2015 en Catamarca =  -3.21 puntos","Diferencia con 2015 en Río Negro =  -2.14 puntos"],"type":"bar","marker":{"autocolorscale":false,"color":"rgba(248,118,109,1)","line":{"width":1.88976377952756,"color":"transparent"}},"name":"peor","legendgroup":"peor","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":23.3059360730594,"r":7.30593607305936,"b":22.648401826484,"l":98.6301369863014},"font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-0.223475,0.325975],"tickmode":"array","ticktext":["-20%","-10%","0%","10%","20%","30%"],"tickvals":[-0.2,-0.1,0,0.1,0.2,0.3],"categoryorder":"array","categoryarray":["-20%","-10%","0%","10%","20%","30%"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.65296803652968,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"y","title":{"text":"","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.4,25.6],"tickmode":"array","ticktext":["Entre Ríos","Santa Fe","Mendoza","CABA","Corrientes","Neuquén","Chaco","La Pampa","Córdoba","Catamarca","Río Negro","Salta","Formosa","San Luis","TOTAL PAÍS","T. del Fuego","Misiones","Sgo. del Estero","Santa Cruz","Jujuy","La Rioja","Tucumán","San Juan","Buenos Aires","Chubut"],"tickvals":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25],"categoryorder":"array","categoryarray":["Entre Ríos","Santa Fe","Mendoza","CABA","Corrientes","Neuquén","Chaco","La Pampa","Córdoba","Catamarca","Río Negro","Salta","Formosa","San Luis","TOTAL PAÍS","T. del Fuego","Misiones","Sgo. del Estero","Santa Cruz","Jujuy","La Rioja","Tucumán","San Juan","Buenos Aires","Chubut"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.65296803652968,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"x","title":{"text":"","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":false,"legend":{"bgcolor":null,"bordercolor":null,"borderwidth":0,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.689497716895},"y":0.922047244094488},"annotations":[{"text":"Desempeño","x":1.02,"y":1,"showarrow":false,"ax":0,"ay":0,"font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"xref":"paper","yref":"paper","textangle":-0,"xanchor":"left","yanchor":"bottom","legendTitle":true}],"hovermode":"closest","width":400,"height":400,"barmode":"relative"},"config":{"doubleClick":"reset","showSendToCloud":false,"displayModeBar":false},"source":"A","attrs":{"2c24e4014e7":{"fill":{},"x":{},"y":{},"label":{},"text":{},"type":"bar"}},"cur_data":"2c24e4014e7","visdat":{"2c24e4014e7":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</td>
+<td style="width: 50%;; text-align: center;">
+<div id="htmlwidget-7b5ceade7f9351001d26" style="width:400px;height:400px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-7b5ceade7f9351001d26">{"x":{"data":[{"orientation":"h","width":[0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5],"base":[0,0,0,0,0,0,0,0,0,0,0],"x":[0.0144,0.021,0.0216,0.0816,0.0957,0.2159,0.2748,0.2753,0.2791,0.3018,0.356],"y":[15,16,17,18,19,20,21,22,23,24,25],"text":["Diferencia con 2015 en T. del Fuego = + 1.44 puntos","Diferencia con 2015 en Catamarca = + 2.1 puntos","Diferencia con 2015 en Salta = + 2.16 puntos","Diferencia con 2015 en Corrientes = + 8.16 puntos","Diferencia con 2015 en Neuquén = + 9.57 puntos","Diferencia con 2015 en CABA = + 21.59 puntos","Diferencia con 2015 en San Luis = + 27.48 puntos","Diferencia con 2015 en Entre Ríos = + 27.53 puntos","Diferencia con 2015 en Mendoza = + 27.91 puntos","Diferencia con 2015 en Santa Fe = + 30.18 puntos","Diferencia con 2015 en Córdoba = + 35.6 puntos"],"type":"bar","marker":{"autocolorscale":false,"color":"rgba(0,186,56,1)","line":{"width":1.88976377952756,"color":"transparent"}},"name":"mejor","legendgroup":"mejor","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"orientation":"h","width":[0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5],"base":[-0.389,-0.2806,-0.2256,-0.217,-0.2051,-0.2006,-0.154,-0.1298,-0.1258,-0.0922,-0.0374,-0.0364,-0.0352,-0.0113],"x":[0.389,0.2806,0.2256,0.217,0.2051,0.2006,0.154,0.1298,0.1258,0.0922,0.0374,0.0364,0.0352,0.0113],"y":[1,2,3,4,5,6,7,8,9,10,11,12,13,14],"text":["Diferencia con 2015 en San Juan =  -38.9 puntos","Diferencia con 2015 en Chubut =  -28.06 puntos","Diferencia con 2015 en Formosa =  -22.56 puntos","Diferencia con 2015 en Misiones =  -21.7 puntos","Diferencia con 2015 en Sgo. del Estero =  -20.51 puntos","Diferencia con 2015 en Tucumán =  -20.06 puntos","Diferencia con 2015 en Buenos Aires =  -15.4 puntos","Diferencia con 2015 en Chaco =  -12.98 puntos","Diferencia con 2015 en Santa Cruz =  -12.58 puntos","Diferencia con 2015 en La Rioja =  -9.22 puntos","Diferencia con 2015 en Jujuy =  -3.74 puntos","Diferencia con 2015 en Río Negro =  -3.64 puntos","Diferencia con 2015 en La Pampa =  -3.52 puntos","Diferencia con 2015 en TOTAL PAÍS =  -1.13 puntos"],"type":"bar","marker":{"autocolorscale":false,"color":"rgba(248,118,109,1)","line":{"width":1.88976377952756,"color":"transparent"}},"name":"peor","legendgroup":"peor","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":23.3059360730594,"r":7.30593607305936,"b":22.648401826484,"l":98.6301369863014},"font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-0.42625,0.39325],"tickmode":"array","ticktext":["-40%","-30%","-20%","-10%","0%","10%","20%","30%"],"tickvals":[-0.4,-0.3,-0.2,-0.1,0,0.1,0.2,0.3],"categoryorder":"array","categoryarray":["-40%","-30%","-20%","-10%","0%","10%","20%","30%"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.65296803652968,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"y","title":{"text":"","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.4,25.6],"tickmode":"array","ticktext":["San Juan","Chubut","Formosa","Misiones","Sgo. del Estero","Tucumán","Buenos Aires","Chaco","Santa Cruz","La Rioja","Jujuy","Río Negro","La Pampa","TOTAL PAÍS","T. del Fuego","Catamarca","Salta","Corrientes","Neuquén","CABA","San Luis","Entre Ríos","Mendoza","Santa Fe","Córdoba"],"tickvals":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25],"categoryorder":"array","categoryarray":["San Juan","Chubut","Formosa","Misiones","Sgo. del Estero","Tucumán","Buenos Aires","Chaco","Santa Cruz","La Rioja","Jujuy","Río Negro","La Pampa","TOTAL PAÍS","T. del Fuego","Catamarca","Salta","Corrientes","Neuquén","CABA","San Luis","Entre Ríos","Mendoza","Santa Fe","Córdoba"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.65296803652968,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"x","title":{"text":"","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":false,"legend":{"bgcolor":null,"bordercolor":null,"borderwidth":0,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.689497716895},"y":0.922047244094488},"annotations":[{"text":"Desempeño","x":1.02,"y":1,"showarrow":false,"ax":0,"ay":0,"font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"xref":"paper","yref":"paper","textangle":-0,"xanchor":"left","yanchor":"bottom","legendTitle":true}],"hovermode":"closest","width":400,"height":400,"barmode":"relative"},"config":{"doubleClick":"reset","showSendToCloud":false,"displayModeBar":false},"source":"A","attrs":{"2c24510463fb":{"fill":{},"x":{},"y":{},"label":{},"text":{},"type":"bar"}},"cur_data":"2c24510463fb","visdat":{"2c24510463fb":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="paso-2019-vs.-generales-2015" class="section level3">
+<h3>PASO 2019 vs. Generales 2015</h3>
+<table style="width: 100%; border-collapse: collapse; border-color: #ffffff;" border="0" cellpadding="10">
+<tbody>
+<tr>
+<td style="width: 50%; text-align: center;">
+<img src="https://i.imgur.com/ypxsyB4.png">
+</td>
+<td style="width: 50%; text-align: center;">
+<img src="https://i.imgur.com/eBVIcZp.png">
+</td>
+</tr>
+<tr>
+<td style="width: 50%; text-align: center;">
+<div id="htmlwidget-f0ddfd11fc7b675337fa" style="width:400px;height:400px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-f0ddfd11fc7b675337fa">{"x":{"data":[{"orientation":"h","width":[0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5],"base":[0,0,0,0,0,0,0,0,0,0,0,0,0],"x":[0.002,0.022,0.048,0.0527,0.0595,0.072,0.0745,0.0914,0.0972,0.1017,0.1635,0.1781,0.3188],"y":[13,14,15,16,17,18,19,20,21,22,23,24,25],"text":["Diferencia con 2015 en Salta = + 0.2 puntos","Diferencia con 2015 en Formosa = + 2.2 puntos","Diferencia con 2015 en T. del Fuego = + 4.8 puntos","Diferencia con 2015 en Misiones = + 5.27 puntos","Diferencia con 2015 en Corrientes = + 5.95 puntos","Diferencia con 2015 en Sgo. del Estero = + 7.2 puntos","Diferencia con 2015 en Tucumán = + 7.45 puntos","Diferencia con 2015 en La Rioja = + 9.14 puntos","Diferencia con 2015 en Santa Cruz = + 9.72 puntos","Diferencia con 2015 en San Juan = + 10.17 puntos","Diferencia con 2015 en Jujuy = + 16.35 puntos","Diferencia con 2015 en Buenos Aires = + 17.81 puntos","Diferencia con 2015 en Chubut = + 31.88 puntos"],"type":"bar","marker":{"autocolorscale":false,"color":"rgba(0,186,56,1)","line":{"width":1.88976377952756,"color":"transparent"}},"name":"mejor","legendgroup":"mejor","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"orientation":"h","width":[0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5],"base":[-0.2272,-0.2141,-0.2059,-0.1811,-0.1479,-0.0754,-0.0694,-0.0558,-0.0536,-0.0192,-0.0183,-0.0135],"x":[0.2272,0.2141,0.2059,0.1811,0.1479,0.0754,0.0694,0.0558,0.0536,0.0192,0.0183,0.0135],"y":[1,2,3,4,5,6,7,8,9,10,11,12],"text":["Diferencia con 2015 en Entre Ríos =  -22.72 puntos","Diferencia con 2015 en Córdoba =  -21.41 puntos","Diferencia con 2015 en Santa Fe =  -20.59 puntos","Diferencia con 2015 en Mendoza =  -18.11 puntos","Diferencia con 2015 en CABA =  -14.79 puntos","Diferencia con 2015 en Catamarca =  -7.54 puntos","Diferencia con 2015 en Chaco =  -6.94 puntos","Diferencia con 2015 en Neuquén =  -5.58 puntos","Diferencia con 2015 en San Luis =  -5.36 puntos","Diferencia con 2015 en La Pampa =  -1.92 puntos","Diferencia con 2015 en Río Negro =  -1.83 puntos","Diferencia con 2015 en TOTAL PAÍS =  -1.35 puntos"],"type":"bar","marker":{"autocolorscale":false,"color":"rgba(248,118,109,1)","line":{"width":1.88976377952756,"color":"transparent"}},"name":"peor","legendgroup":"peor","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":23.3059360730594,"r":7.30593607305936,"b":22.648401826484,"l":98.6301369863014},"font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-0.2545,0.3461],"tickmode":"array","ticktext":["-20%","-10%","0%","10%","20%","30%"],"tickvals":[-0.2,-0.1,0,0.1,0.2,0.3],"categoryorder":"array","categoryarray":["-20%","-10%","0%","10%","20%","30%"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.65296803652968,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"y","title":{"text":"","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.4,25.6],"tickmode":"array","ticktext":["Entre Ríos","Córdoba","Santa Fe","Mendoza","CABA","Catamarca","Chaco","Neuquén","San Luis","La Pampa","Río Negro","TOTAL PAÍS","Salta","Formosa","T. del Fuego","Misiones","Corrientes","Sgo. del Estero","Tucumán","La Rioja","Santa Cruz","San Juan","Jujuy","Buenos Aires","Chubut"],"tickvals":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25],"categoryorder":"array","categoryarray":["Entre Ríos","Córdoba","Santa Fe","Mendoza","CABA","Catamarca","Chaco","Neuquén","San Luis","La Pampa","Río Negro","TOTAL PAÍS","Salta","Formosa","T. del Fuego","Misiones","Corrientes","Sgo. del Estero","Tucumán","La Rioja","Santa Cruz","San Juan","Jujuy","Buenos Aires","Chubut"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.65296803652968,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"x","title":{"text":"","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":false,"legend":{"bgcolor":null,"bordercolor":null,"borderwidth":0,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.689497716895},"y":0.922047244094488},"annotations":[{"text":"Desempeño","x":1.02,"y":1,"showarrow":false,"ax":0,"ay":0,"font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"xref":"paper","yref":"paper","textangle":-0,"xanchor":"left","yanchor":"bottom","legendTitle":true}],"hovermode":"closest","width":400,"height":400,"barmode":"relative"},"config":{"doubleClick":"reset","showSendToCloud":false,"displayModeBar":false},"source":"A","attrs":{"2c24a8f6491":{"fill":{},"x":{},"y":{},"label":{},"text":{},"type":"bar"}},"cur_data":"2c24a8f6491","visdat":{"2c24a8f6491":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</td>
+<td style="width: 50%; text-align: center;">
+<div id="htmlwidget-490aa1bd2515e7613622" style="width:400px;height:400px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-490aa1bd2515e7613622">{"x":{"data":[{"orientation":"h","width":[0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5],"base":[0,0,0,0,0,0,0,0,0,0,0,0],"x":[0.002,0.00359999999999999,0.0294,0.0498,0.0885,0.0946,0.2075,0.2934,0.2975,0.31,0.3136,0.3148],"y":[14,15,16,17,18,19,20,21,22,23,24,25],"text":["Diferencia con 2015 en TOTAL PAÍS = + 0.2 puntos","Diferencia con 2015 en Jujuy = + 0.359999999999999 puntos","Diferencia con 2015 en T. del Fuego = + 2.94 puntos","Diferencia con 2015 en Salta = + 4.98 puntos","Diferencia con 2015 en Catamarca = + 8.85 puntos","Diferencia con 2015 en Neuquén = + 9.46 puntos","Diferencia con 2015 en CABA = + 20.75 puntos","Diferencia con 2015 en Entre Ríos = + 29.34 puntos","Diferencia con 2015 en Mendoza = + 29.75 puntos","Diferencia con 2015 en Córdoba = + 31 puntos","Diferencia con 2015 en Santa Fe = + 31.36 puntos","Diferencia con 2015 en San Luis = + 31.48 puntos"],"type":"bar","marker":{"autocolorscale":false,"color":"rgba(0,186,56,1)","line":{"width":1.88976377952756,"color":"transparent"}},"name":"mejor","legendgroup":"mejor","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"orientation":"h","width":[0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5],"base":[-0.3038,-0.294,-0.2537,-0.2241,-0.1761,-0.1529,-0.1319,-0.1262,-0.1202,-0.1138,-0.0496,-0.0422,-0.0162],"x":[0.3038,0.294,0.2537,0.2241,0.1761,0.1529,0.1319,0.1262,0.1202,0.1138,0.0496,0.0422,0.0162],"y":[1,2,3,4,5,6,7,8,9,10,11,12,13],"text":["Diferencia con 2015 en San Juan =  -30.38 puntos","Diferencia con 2015 en Formosa =  -29.4 puntos","Diferencia con 2015 en Misiones =  -25.37 puntos","Diferencia con 2015 en Chubut =  -22.41 puntos","Diferencia con 2015 en Sgo. del Estero =  -17.61 puntos","Diferencia con 2015 en Santa Cruz =  -15.29 puntos","Diferencia con 2015 en Buenos Aires =  -13.19 puntos","Diferencia con 2015 en Corrientes =  -12.62 puntos","Diferencia con 2015 en Chaco =  -12.02 puntos","Diferencia con 2015 en Tucumán =  -11.38 puntos","Diferencia con 2015 en La Rioja =  -4.96 puntos","Diferencia con 2015 en Río Negro =  -4.22 puntos","Diferencia con 2015 en La Pampa =  -1.62 puntos"],"type":"bar","marker":{"autocolorscale":false,"color":"rgba(248,118,109,1)","line":{"width":1.88976377952756,"color":"transparent"}},"name":"peor","legendgroup":"peor","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":23.3059360730594,"r":7.30593607305936,"b":22.648401826484,"l":98.6301369863014},"font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-0.33473,0.34573],"tickmode":"array","ticktext":["-30%","-20%","-10%","0%","10%","20%","30%"],"tickvals":[-0.3,-0.2,-0.1,0,0.1,0.2,0.3],"categoryorder":"array","categoryarray":["-30%","-20%","-10%","0%","10%","20%","30%"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.65296803652968,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"y","title":{"text":"","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.4,25.6],"tickmode":"array","ticktext":["San Juan","Formosa","Misiones","Chubut","Sgo. del Estero","Santa Cruz","Buenos Aires","Corrientes","Chaco","Tucumán","La Rioja","Río Negro","La Pampa","TOTAL PAÍS","Jujuy","T. del Fuego","Salta","Catamarca","Neuquén","CABA","Entre Ríos","Mendoza","Córdoba","Santa Fe","San Luis"],"tickvals":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25],"categoryorder":"array","categoryarray":["San Juan","Formosa","Misiones","Chubut","Sgo. del Estero","Santa Cruz","Buenos Aires","Corrientes","Chaco","Tucumán","La Rioja","Río Negro","La Pampa","TOTAL PAÍS","Jujuy","T. del Fuego","Salta","Catamarca","Neuquén","CABA","Entre Ríos","Mendoza","Córdoba","Santa Fe","San Luis"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.65296803652968,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"x","title":{"text":"","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":false,"legend":{"bgcolor":null,"bordercolor":null,"borderwidth":0,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.689497716895},"y":0.922047244094488},"annotations":[{"text":"Desempeño","x":1.02,"y":1,"showarrow":false,"ax":0,"ay":0,"font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"xref":"paper","yref":"paper","textangle":-0,"xanchor":"left","yanchor":"bottom","legendTitle":true}],"hovermode":"closest","width":400,"height":400,"barmode":"relative"},"config":{"doubleClick":"reset","showSendToCloud":false,"displayModeBar":false},"source":"A","attrs":{"2c247f8f3ac5":{"fill":{},"x":{},"y":{},"label":{},"text":{},"type":"bar"}},"cur_data":"2c247f8f3ac5","visdat":{"2c247f8f3ac5":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="cortes-de-boleta-netos" class="section level2 tabset tabset-fade">
+<h2>Cortes de boleta netos</h2>
+<div id="pba-3" class="section level3">
+<h3>PBA</h3>
+<table style="height: 64px; width: 100%; border-collapse: collapse; border-color: #ffffff;" border="0" cellspacing="10" cellpadding="20">
+<tbody>
+<tr style="height: 18px;">
+<td style="width: 33.3333%; height: 18px; text-align: center;">
+<span style="font-family: helvetica; font-size: 14pt;"><img src="https://i.imgur.com/Etfw4gt.png"></span>
+</td>
+<td style="width: 33.3333%; height: 18px; text-align: center;">
+<span style="font-family: helvetica; font-size: 14pt;"><img src="https://i.imgur.com/2qpIDdH.png"></span>
+</td>
+<td style="width: 33.3333%; height: 18px; text-align: center;">
+<span style="font-family: helvetica; font-size: 14pt;"><img src="https://i.imgur.com/nI95jYu.png"></span>
+</td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 33.3333%; height: 18px; text-align: center;">
+<p><span style="font-family: helvetica; font-size: 14pt;"></p>
+<div id="htmlwidget-9d74e60816e160a3d3f3" style="width:300px;height:200px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-9d74e60816e160a3d3f3">{"x":{"data":[{"orientation":"v","width":[0.9,0.9],"base":[0,0],"x":[1,2],"y":[0.3861,0.4162],"text":["Macri - Pichetto 38.61 %","Vidal - Salvador 41.62 %"],"type":"bar","marker":{"autocolorscale":false,"color":"rgba(255,185,15,1)","line":{"width":1.88976377952756,"color":"transparent"}},"showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":26.958904109589,"r":7.30593607305936,"b":26.3013698630137,"l":28.4931506849315},"font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.4,2.6],"tickmode":"array","ticktext":["Macri - Pichetto","Vidal - Salvador"],"tickvals":[1,2],"categoryorder":"array","categoryarray":["Macri - Pichetto","Vidal - Salvador"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.65296803652968,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"y","title":{"text":"","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-0.03,0.63],"tickmode":"array","ticktext":["0%","20%","40%","60%"],"tickvals":[0,0.2,0.4,0.6],"categoryorder":"array","categoryarray":["0%","20%","40%","60%"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.65296803652968,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"x","title":{"text":"","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":false,"legend":false,"hovermode":"closest","width":300,"height":200,"barmode":"relative"},"config":{"doubleClick":"reset","showSendToCloud":false,"displayModeBar":false},"source":"A","attrs":{"2c2435fb74a4":{"x":{},"y":{},"text":{},"type":"bar"}},"cur_data":"2c2435fb74a4","visdat":{"2c2435fb74a4":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</span>
+</td>
+<td style="width: 33.3333%; height: 18px; text-align: center;">
+<p><span style="font-family: helvetica; font-size: 14pt;"></p>
+<div id="htmlwidget-fd75bf82cbd439dbfe38" style="width:300px;height:200px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-fd75bf82cbd439dbfe38">{"x":{"data":[{"orientation":"v","width":[0.9,0.9],"base":[0,0],"x":[1,2],"y":[0.4325,0.3658],"text":["Fernández - Fernández 43.25 %","Kicillof - Magario 36.58 %"],"type":"bar","marker":{"autocolorscale":false,"color":"rgba(0,154,205,1)","line":{"width":1.88976377952756,"color":"transparent"}},"showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":26.958904109589,"r":7.30593607305936,"b":26.3013698630137,"l":28.4931506849315},"font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.4,2.6],"tickmode":"array","ticktext":["Fernández - Fernández","Kicillof - Magario"],"tickvals":[1,2],"categoryorder":"array","categoryarray":["Fernández - Fernández","Kicillof - Magario"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.65296803652968,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"y","title":{"text":"","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-0.03,0.63],"tickmode":"array","ticktext":["0%","20%","40%","60%"],"tickvals":[0,0.2,0.4,0.6],"categoryorder":"array","categoryarray":["0%","20%","40%","60%"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.65296803652968,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"x","title":{"text":"","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":false,"legend":false,"hovermode":"closest","width":300,"height":200,"barmode":"relative"},"config":{"doubleClick":"reset","showSendToCloud":false,"displayModeBar":false},"source":"A","attrs":{"2c24b124e68":{"x":{},"y":{},"text":{},"type":"bar"}},"cur_data":"2c24b124e68","visdat":{"2c24b124e68":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</span>
+</td>
+<td style="width: 33.3333%; height: 18px; text-align: center;">
+<p><span style="font-family: helvetica; font-size: 14pt;"></p>
+<div id="htmlwidget-718a4ed7897c456c0774" style="width:300px;height:200px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-718a4ed7897c456c0774">{"x":{"data":[{"orientation":"v","width":[0.9,0.9],"base":[0,0],"x":[1,2],"y":[0.0987,0.0658],"text":["Lavagna - Urtubey 9.87 %","Bucca - Saredi 6.58 %"],"type":"bar","marker":{"autocolorscale":false,"color":"rgba(0,0,139,1)","line":{"width":1.88976377952756,"color":"transparent"}},"showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":26.958904109589,"r":7.30593607305936,"b":26.3013698630137,"l":28.4931506849315},"font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.4,2.6],"tickmode":"array","ticktext":["Lavagna - Urtubey","Bucca - Saredi"],"tickvals":[1,2],"categoryorder":"array","categoryarray":["Lavagna - Urtubey","Bucca - Saredi"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.65296803652968,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"y","title":{"text":"","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-0.03,0.63],"tickmode":"array","ticktext":["0%","20%","40%","60%"],"tickvals":[0,0.2,0.4,0.6],"categoryorder":"array","categoryarray":["0%","20%","40%","60%"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.65296803652968,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"x","title":{"text":"","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":false,"legend":false,"hovermode":"closest","width":300,"height":200,"barmode":"relative"},"config":{"doubleClick":"reset","showSendToCloud":false,"displayModeBar":false},"source":"A","attrs":{"2c247ca41222":{"x":{},"y":{},"text":{},"type":"bar"}},"cur_data":"2c247ca41222","visdat":{"2c247ca41222":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</span>
+</td>
+</tr>
+<tr style="height: 10px;">
+<td style="width: 33.3333%; height: 10px; text-align: center;">
+<span style="font-family: helvetica; font-size: 14pt;"><span style="color: #f6b11b;"><strong><span style="font-size: 17pt;">3.01</span> puntos</strong></span></br> a favor de <span style="color: #f6b11b;"><strong>Vidal - Salvador</strong></span></span>
+</td>
+<td style="width: 33.3333%; height: 10px; text-align: center;">
+<p>
+<span style="font-family: helvetica; font-size: 14pt;"><span style="color: #019dda;"><strong><span style="font-size: 17pt;">6.67</span> puntos</strong></br> </span>a favor de <span style="color: #019dda;"><strong>Fernández - Fernández</strong></span></span>
+</p>
+</td>
+<td style="width: 33.3333%; height: 10px; text-align: center;">
+<span style="font-family: helvetica; font-size: 14pt;"><span style="color: #313578;"><strong><span style="font-size: 17pt;">3.29</span> puntos</strong></span></br> a favor de <span style="color: #313578;"><strong>Lavagna - Urtubey</strong></span></span>
+</td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 33.3333%; height: 18px; text-align: center;">
+<span style="font-family: helvetica; font-size: 12pt; color: #333333;"><em>(541800 personas votaron a Vidal - Salvador pero no votaron a Macri - Pichetto)</em></span>
+</td>
+<td style="width: 33.3333%; height: 18px; text-align: center;">
+<span style="font-family: helvetica; font-size: 12pt; color: #333333;"><em>(1200600 personas votaron a Fernández - Fernández pero no votaron a Kicillof - Magario)</em></span>
+</td>
+<td style="width: 33.3333%; height: 18px; text-align: center;">
+<span style="font-family: helvetica; font-size: 12pt; color: #333333;"><em>(592200 personas votaron a Lavagna - Urtubey pero no votaron a Bucca - Saredi)</em></span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="caba-3" class="section level3">
+<h3>CABA</h3>
+<table style="height: 64px; width: 100%; border-collapse: collapse; border-color: #ffffff;" border="0" cellspacing="10" cellpadding="20">
+<tbody>
+<tr style="height: 18px;">
+<td style="width: 33.3333%; height: 18px; text-align: center;">
+<span style="font-family: helvetica; font-size: 14pt;"><img src="https://i.imgur.com/Etfw4gt.png"></span>
+</td>
+<td style="width: 33.3333%; height: 18px; text-align: center;">
+<span style="font-family: helvetica; font-size: 14pt;"><img src="https://i.imgur.com/2qpIDdH.png"></span>
+</td>
+<td style="width: 33.3333%; height: 18px; text-align: center;">
+<span style="font-family: helvetica; font-size: 14pt;"><img src="https://i.imgur.com/nI95jYu.png"></span>
+</td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 33.3333%; height: 18px; text-align: center;">
+<p><span style="font-family: helvetica; font-size: 14pt;"></p>
+<div id="htmlwidget-8ebed18d5d7d64deb317" style="width:300px;height:200px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-8ebed18d5d7d64deb317">{"x":{"data":[{"orientation":"v","width":[0.9,0.9],"base":[0,0],"x":[1,2],"y":[0.3861,0.4162],"text":["Macri - Pichetto 38.61 %","Rodríguez Larreta 41.62 %"],"type":"bar","marker":{"autocolorscale":false,"color":"rgba(255,185,15,1)","line":{"width":1.88976377952756,"color":"transparent"}},"showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":26.958904109589,"r":7.30593607305936,"b":26.3013698630137,"l":28.4931506849315},"font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.4,2.6],"tickmode":"array","ticktext":["Macri - Pichetto","Rodríguez Larreta"],"tickvals":[1,2],"categoryorder":"array","categoryarray":["Macri - Pichetto","Rodríguez Larreta"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.65296803652968,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"y","title":{"text":"","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-0.03,0.63],"tickmode":"array","ticktext":["0%","20%","40%","60%"],"tickvals":[0,0.2,0.4,0.6],"categoryorder":"array","categoryarray":["0%","20%","40%","60%"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.65296803652968,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"x","title":{"text":"","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":false,"legend":false,"hovermode":"closest","width":300,"height":200,"barmode":"relative"},"config":{"doubleClick":"reset","showSendToCloud":false,"displayModeBar":false},"source":"A","attrs":{"2c245856439e":{"x":{},"y":{},"text":{},"type":"bar"}},"cur_data":"2c245856439e","visdat":{"2c245856439e":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</span>
+</td>
+<td style="width: 33.3333%; height: 18px; text-align: center;">
+<p><span style="font-family: helvetica; font-size: 14pt;"></p>
+<div id="htmlwidget-0ad84040b7039b97b699" style="width:300px;height:200px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-0ad84040b7039b97b699">{"x":{"data":[{"orientation":"v","width":[0.9,0.9],"base":[0,0],"x":[1,2],"y":[0.4325,0.3658],"text":["Fernández - Fernández 43.25 %","Lammens 36.58 %"],"type":"bar","marker":{"autocolorscale":false,"color":"rgba(0,154,205,1)","line":{"width":1.88976377952756,"color":"transparent"}},"showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":26.958904109589,"r":7.30593607305936,"b":26.3013698630137,"l":28.4931506849315},"font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.4,2.6],"tickmode":"array","ticktext":["Fernández - Fernández","Lammens"],"tickvals":[1,2],"categoryorder":"array","categoryarray":["Fernández - Fernández","Lammens"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.65296803652968,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"y","title":{"text":"","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-0.03,0.63],"tickmode":"array","ticktext":["0%","20%","40%","60%"],"tickvals":[0,0.2,0.4,0.6],"categoryorder":"array","categoryarray":["0%","20%","40%","60%"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.65296803652968,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"x","title":{"text":"","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":false,"legend":false,"hovermode":"closest","width":300,"height":200,"barmode":"relative"},"config":{"doubleClick":"reset","showSendToCloud":false,"displayModeBar":false},"source":"A","attrs":{"2c247ef3c2f":{"x":{},"y":{},"text":{},"type":"bar"}},"cur_data":"2c247ef3c2f","visdat":{"2c247ef3c2f":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</span>
+</td>
+<td style="width: 33.3333%; height: 18px; text-align: center;">
+<p><span style="font-family: helvetica; font-size: 14pt;"></p>
+<div id="htmlwidget-b6c604c2a890a5a6f5b6" style="width:300px;height:200px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-b6c604c2a890a5a6f5b6">{"x":{"data":[{"orientation":"v","width":[0.9,0.9],"base":[0,0],"x":[1,2],"y":[0.0987,0.0658],"text":["Lavagna - Urtubey 9.87 %","Tombolini 6.58 %"],"type":"bar","marker":{"autocolorscale":false,"color":"rgba(0,0,139,1)","line":{"width":1.88976377952756,"color":"transparent"}},"showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":26.958904109589,"r":7.30593607305936,"b":26.3013698630137,"l":28.4931506849315},"font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.4,2.6],"tickmode":"array","ticktext":["Lavagna - Urtubey","Tombolini"],"tickvals":[1,2],"categoryorder":"array","categoryarray":["Lavagna - Urtubey","Tombolini"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.65296803652968,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"y","title":{"text":"","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-0.03,0.63],"tickmode":"array","ticktext":["0%","20%","40%","60%"],"tickvals":[0,0.2,0.4,0.6],"categoryorder":"array","categoryarray":["0%","20%","40%","60%"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.65296803652968,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"x","title":{"text":"","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":false,"legend":false,"hovermode":"closest","width":300,"height":200,"barmode":"relative"},"config":{"doubleClick":"reset","showSendToCloud":false,"displayModeBar":false},"source":"A","attrs":{"2c243c63345d":{"x":{},"y":{},"text":{},"type":"bar"}},"cur_data":"2c243c63345d","visdat":{"2c243c63345d":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</span>
+</td>
+</tr>
+<tr style="height: 10px;">
+<td style="width: 33.3333%; height: 10px; text-align: center;">
+<span style="font-family: helvetica; font-size: 14pt;"><span style="color: #f6b11b;"><strong><span style="font-size: 17pt;">3.01</span> puntos</strong></span></br> a favor de <span style="color: #f6b11b;"><strong>Rodríguez Larreta</strong></span></span>
+</td>
+<td style="width: 33.3333%; height: 10px; text-align: center;">
+<p>
+<span style="font-family: helvetica; font-size: 14pt;"><span style="color: #019dda;"><strong><span style="font-size: 17pt;">6.67</span> puntos</strong></br> </span>a favor de <span style="color: #019dda;"><strong>Fernández - Fernández</strong></span></span>
+</p>
+</td>
+<td style="width: 33.3333%; height: 10px; text-align: center;">
+<span style="font-family: helvetica; font-size: 14pt;"><span style="color: #313578;"><strong><span style="font-size: 17pt;">3.29</span> puntos</strong></span></br> a favor de <span style="color: #313578;"><strong>Lavagna - Urtubey</strong></span></span>
+</td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 33.3333%; height: 18px; text-align: center;">
+<span style="font-family: helvetica; font-size: 12pt; color: #333333;"><em>(541800 personas votaron a Rodríguez Larreta pero no votaron a Macri - Pichetto)</em></span>
+</td>
+<td style="width: 33.3333%; height: 18px; text-align: center;">
+<span style="font-family: helvetica; font-size: 12pt; color: #333333;"><em>(1200600 personas votaron a Fernández - Fernández pero no votaron a Lammens)</em></span>
+</td>
+<td style="width: 33.3333%; height: 18px; text-align: center;">
+<span style="font-family: helvetica; font-size: 12pt; color: #333333;"><em>(592200 personas votaron a Lavagna - Urtubey pero no votaron a Tombolini)</em></span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="section-3" class="section level2">
+<h2></h2>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
