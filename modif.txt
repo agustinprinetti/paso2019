@@ -1,12 +1,12 @@
 .main-content table th {
     font-weight: 700;
-    background-color: #999999;
+    background-color: #787878;
     color: #fff;
 }
 .main-content h1, .main-content h3, .main-content h4, .main-content h5, .main-content h6 {
     margin-top: 2rem;
     margin-bottom: 1rem;
-    font-weight: bold;
+    font-weight: 400;
     color: #404040;
 }
 
