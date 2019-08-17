@@ -1,0 +1,76 @@
+---
+title: "Untitled"
+author: "AP"
+date: "15/8/2019"
+output: html_document
+---
+
+```{r diputados2019 setup, include=FALSE}
+
+library(reshape2)
+
+germany2<-read.csv("abr.csv", sep=";")
+
+bundestag1 <- ggplot(germany2, aes(x, y, colour = party_short, text = ifelse(COMENTARIO=="",paste("Nombre:",NOMBRE,"<br />Provincia:",PROVINCIA,"<br />Postura:",party_short,"<br />Mandato:",MANDATO),paste("Nombre:",NOMBRE,"<br />Provincia:",PROVINCIA,"<br />Postura:",party_short,"<br />Mandato:",MANDATO,"<br />",COMENTARIO)))) +
+  geom_parliament_seats(size = 2) +
+  labs(colour="Party") +  
+  theme_ggparliament(legend = TRUE) +
+  scale_colour_manual(values = c("#32a852", "#3394d4", "#262626", "#a6e0b6", "#b7d6eb", "#c9c9c9"))+
+  draw_majoritythreshold(n = 128, 
+                         label = FALSE, 
+                         linealpha = 1,
+                         linesize = 0.25,
+                         linetype = 1,
+                         type = 'semicircle') + 
+  theme(  panel.grid.major = element_blank(),
+          panel.grid.minor = element_blank(),
+          axis.line=element_blank())
+
+```
+
+
+```{r senadores2019 setup, include=FALSE}
+
+##germany <- read.csv("https://www.dropbox.com/s/ybq6lpiu5styj9f/absen.csv?dl=1", sep=";") 
+
+##germany <- parliament_data(election_data = germany, 
+         #                parl_rows = 5,
+          #              type = 'semicircle',
+           #            party_seats = germany$seats)
+# write.csv(germany, "abrsen.csv")
+
+
+germany3<-read.csv("abrsen.csv", sep=";")
+
+bundestag <- ggplot(germany3, aes(x, y, colour = party_short, text = ifelse(COMENTARIO=="",paste("Nombre:",NOMBRE,"<br />Provincia:",PROVINCIA,"<br />Postura:",party_short,"<br />Mandato:",MANDATO),paste("Nombre:",NOMBRE,"<br />Provincia:",PROVINCIA,"<br />Postura:",party_short,"<br />Mandato:",MANDATO,"<br />",COMENTARIO)))) +
+  geom_parliament_seats(size = 8) +
+  labs(colour="Party") +  
+  theme_ggparliament(legend = TRUE) +
+  scale_colour_manual(values = c("#32a852", "#3394d4", "#262626", "#b7d6eb", "#c9c9c9"))+
+  theme(  panel.grid.major = element_blank(),
+          panel.grid.minor = element_blank(),
+          axis.line=element_blank())
+
+ggplotly(bundestag, tooltip = c("text")) %>% 
+  layout(legend = list(orientation = "h", x = 0.01, y = 1.20)) %>% 
+  config(displayModeBar = FALSE)
+
+dipent<-read.csv("dipent.csv", sep=";")
+
+dipentrantes <- ggplot(dipent, aes(x=Tipo, y = N,fill=forcats::fct_rev(Voto), text=paste(N))) +
+    geom_bar(stat='identity') +
+  scale_fill_manual(values = c("#c9c9c9", "#3394d4", "#b7d6eb", "#262626", "#a6e0b6", "#32a852")) +
+  coord_flip() +
+  theme_minimal() +
+  labs(x="", y="") +
+  theme(  panel.grid.major = element_blank(),
+          panel.grid.minor = element_blank(),
+          axis.line=element_blank(),
+          axis.text.x = element_blank())
+
+
+ggplotly(dipentrantes, tooltip = c("text"), width = 400, height = 200) %>% 
+  layout(showlegend = FALSE) %>% 
+  config(displayModeBar = FALSE)
+
+```

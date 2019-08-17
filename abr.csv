@@ -1,0 +1,258 @@
+year;country;house;party_long;party_short;seats;government;colour;x;y;row;theta;NOMBRE;SEXO;FUENTE;TWITTER;COMENTARIO;MANDATO;PROVINCIA
+2019;Argentina;Diputados;A favor;A favor;108;0;#32a852;-2;2.45E-16;8;3.141592654;LAURA V. ALONSO;F;Voto 2018;;;2017 a 2021;Buenos Aires
+2019;Argentina;Diputados;A favor;A favor;108;0;#32a852;-1.857142857;2.27E-16;7;3.141592654;DANIEL FERNANDO ARROYO;M;Voto 2018;;;2017 a 2021;Buenos Aires
+2019;Argentina;Diputados;A favor;A favor;108;0;#32a852;-1.714285714;2.10E-16;6;3.141592654;EDUARDO BUCCA;M;Voto 2018;;;2017 a 2021;Buenos Aires
+2019;Argentina;Diputados;A favor;A favor;108;0;#32a852;-1.571428571;1.92E-16;5;3.141592654;WALTER CORREA;M;Voto 2018;;;2017 a 2021;Buenos Aires
+2019;Argentina;Diputados;A favor;A favor;108;0;#32a852;-1.428571429;1.75E-16;4;3.141592654;JOSE IGNACIO DE MENDIGUREN;M;Voto 2018;;;2017 a 2021;Buenos Aires
+2019;Argentina;Diputados;A favor;A favor;108;0;#32a852;-1.285714286;1.57E-16;3;3.141592654;NICOLAS DEL CAÑO;M;Voto 2018;;;2017 a 2021;Buenos Aires
+2019;Argentina;Diputados;A favor;A favor;108;0;#32a852;-1.142857143;1.40E-16;2;3.141592654;ROMINA DEL PLA;F;Voto 2018;;;2017 a 2021;Buenos Aires
+2019;Argentina;Diputados;A favor;A favor;108;0;#32a852;-1;1.22E-16;1;3.141592654;CARLOS ALBERTO FERNANDEZ;M;Voto 2018;;;2017 a 2021;Buenos Aires
+2019;Argentina;Diputados;A favor;A favor;108;0;#32a852;-1.994407594;0.149460187;8;3.066792829;MONICA MACHA;F;Voto 2018;;;2017 a 2021;Buenos Aires
+2019;Argentina;Diputados;A favor;A favor;108;0;#32a852;-1.850799773;0.153361642;7;3.058919163;JOSEFINA MENDOZA;F;Voto 2018;;;2017 a 2021;Buenos Aires
+2019;Argentina;Diputados;A favor;A favor;108;0;#32a852;-1.70776234;0.149409845;6;3.054326191;LEOPOLDO RAUL GUIDO MOREAU;M;Voto 2018;;;2017 a 2021;Buenos Aires
+2019;Argentina;Diputados;A favor;A favor;108;0;#32a852;-1.563861713;0.154026935;5;3.043417883;MARIA GRACIELA OCAÑA;F;Voto 2018;;;2017 a 2021;Buenos Aires
+2019;Argentina;Diputados;A favor;A favor;108;0;#32a852;-1.420745565;0.149326376;4;3.036872898;HORACIO PIETRAGALLA CORTI;M;Voto 2018;;;2017 a 2021;Buenos Aires
+2019;Argentina;Diputados;A favor;A favor;108;0;#32a852;-1.277020746;0.149262318;3;3.02523737;FABIO JOSE QUETGLAS;M;Voto 2018;;;2017 a 2021;Buenos Aires
+2019;Argentina;Diputados;A favor;A favor;108;0;#32a852;-1.133079842;0.149172791;2;3.01069296;LAURA RUSSO;F;Voto 2018;;;2017 a 2021;Buenos Aires
+2019;Argentina;Diputados;A favor;A favor;108;0;#32a852;-1.977661652;0.298084532;8;2.991993003;ROBERTO SALVAREZZA;M;Voto 2018;;;2017 a 2021;Buenos Aires
+2019;Argentina;Diputados;A favor;A favor;108;0;#32a852;-0.987688341;0.156434465;1;2.984513021;DANIEL SCIOLI;M;Voto 2018;;;2017 a 2021;Buenos Aires
+2019;Argentina;Diputados;A favor;A favor;108;0;#32a852;-1.831813849;0.305675668;7;2.976245672;MAGDALENA SIERRA;F;Voto 2018;;;2017 a 2021;Buenos Aires
+2019;Argentina;Diputados;A favor;A favor;108;0;#32a852;-1.688241862;0.29768259;6;2.967059728;VANESA SILEY;F;Voto 2018;;;2017 a 2021;Buenos Aires
+2019;Argentina;Diputados;A favor;A favor;108;0;#32a852;-1.541234012;0.306570506;5;2.945243113;FELIPE CARLOS SOLA;M;Voto 2018;;;2017 a 2021;Buenos Aires
+2019;Argentina;Diputados;A favor;A favor;108;0;#32a852;-1.397353715;0.297016701;4;2.932153143;MIRTA TUNDIS;F;Voto 2018;;;2017 a 2021;Buenos Aires
+2019;Argentina;Diputados;A favor;A favor;108;0;#32a852;-1.949855824;0.445041868;8;2.917193178;FERNANDA VALLEJOS;F;Voto 2018;;;2017 a 2021;Buenos Aires
+2019;Argentina;Diputados;A favor;A favor;108;0;#32a852;-1.251057691;0.29650612;3;2.908882087;HUGO YASKY;M;Voto 2018;;;2017 a 2021;Buenos Aires
+2019;Argentina;Diputados;A favor;A favor;108;0;#32a852;-1.80031478;0.455901619;7;2.893572181;AIDA BEATRIZ MAXIMA AYALA;F;Voto 2018;;;2017 a 2021;Chaco
+2019;Argentina;Diputados;A favor;A favor;108;0;#32a852;-1.655872845;0.443689792;6;2.879793266;GUSTAVO MENNA;M;Voto 2018;;;2017 a 2021;Chubut
+2019;Argentina;Diputados;A favor;A favor;108;0;#32a852;-1.10391523;0.295793194;2;2.879793266;JUAN CABANDIE;M;Voto 2018;;;2017 a 2021;CABA
+2019;Argentina;Diputados;A favor;A favor;108;0;#32a852;-1.503763385;0.456161636;5;2.847068342;ANA CARLA CARRIZO;F;Voto 2018;;;2017 a 2021;CABA
+2019;Argentina;Diputados;A favor;A favor;108;0;#32a852;-1.911145612;0.589510349;8;2.842393353;GABRIELA CERRUTI;F;Voto 2018;;;2017 a 2021;CABA
+2019;Argentina;Diputados;A favor;A favor;108;0;#32a852;-1.358652166;0.441452849;4;2.827433388;DANIEL FILMUS;M;Voto 2018;;;2017 a 2021;CABA
+2019;Argentina;Diputados;A favor;A favor;108;0;#32a852;-0.951056516;0.309016994;1;2.827433388;ALEJANDRO GARCIA;M;Voto 2018;;;2017 a 2021;CABA
+2019;Argentina;Diputados;A favor;A favor;108;0;#32a852;-1.756517735;0.6030133;7;2.81089869;FERNANDO ADOLFO IGLESIAS;M;Voto 2018;;;2017 a 2021;CABA
+2019;Argentina;Diputados;A favor;A favor;108;0;#32a852;-1.610901636;0.586320246;6;2.792526803;JUAN MANUEL LOPEZ;M;Voto 2018;;;2017 a 2021;CABA
+2019;Argentina;Diputados;A favor;A favor;108;0;#32a852;-1.208176227;0.439740184;3;2.792526803;ÁLVARO DE LAMADRID *;M;https://twitter.com/AlvarodLamadrid/status/1024622112491880448;;;2017 a 2021;CABA
+2019;Argentina;Diputados;A favor;A favor;108;0;#32a852;-1.861747497;0.730682049;8;2.767593528;FACUNDO SUAREZ LASTRA;M;Voto 2018;;;2017 a 2021;CABA
+2019;Argentina;Diputados;A favor;A favor;108;0;#32a852;-1.451810694;0.601359679;5;2.748893572;BRENDA LIS AUSTIN;F;Voto 2018;;;2017 a 2021;Córdoba
+2019;Argentina;Diputados;A favor;A favor;108;0;#32a852;-1.055862323;0.437352494;2;2.748893572;PABLO CARRO;M;Voto 2018;;;2017 a 2021;Córdoba
+2019;Argentina;Diputados;A favor;A favor;108;0;#32a852;-1.700721892;0.746005789;7;2.728225199;SOFIA BRAMBILLA;F;Voto 2018;;;2017 a 2021;Corrientes
+2019;Argentina;Diputados;A favor;A favor;108;0;#32a852;-1.305064939;0.581052347;4;2.722713633;JUAN JOSE BAHILLO;M;Voto 2018;;;2017 a 2021;Entre Ríos
+2019;Argentina;Diputados;A favor;A favor;108;0;#32a852;-1.553670492;0.724488449;6;2.705260341;ATILIO FRANCISCO SALVADOR BENEDETTI;M;Voto 2018;;;2017 a 2021;Entre Ríos
+2019;Argentina;Diputados;A favor;A favor;108;0;#32a852;-1.801937736;0.867767478;8;2.692793703;JORGE ENRIQUE LACOSTE;M;Voto 2018;;;2017 a 2021;Entre Ríos
+2019;Argentina;Diputados;A favor;A favor;108;0;#32a852;-1.148956252;0.577027517;3;2.67617152;MELINA AIDA DELU;F;Voto 2018;;;2017 a 2021;La Pampa
+2019;Argentina;Diputados;A favor;A favor;108;0;#32a852;-0.891006524;0.4539905;1;2.670353756;ARIEL RAUSCHENBERGER;M;Voto 2018;;;2017 a 2021;La Pampa
+2019;Argentina;Diputados;A favor;A favor;108;0;#32a852;-1.385876273;0.740766301;5;2.650718801;CLAUDIA NAJUL;F;Voto 2018;;;2017 a 2021;Mendoza
+2019;Argentina;Diputados;A favor;A favor;108;0;#32a852;-1.633308395;0.883902301;7;2.645551708;NORMAN DARIO MARTINEZ;M;Voto 2018;;;2017 a 2021;Neuquén
+2019;Argentina;Diputados;A favor;A favor;108;0;#32a852;-1.732050808;1;8;2.617993878;LORENA MATZEN;F;Voto 2018;;;2017 a 2021;Río Negro
+2019;Argentina;Diputados;A favor;A favor;108;0;#32a852;-1.484614978;0.857142857;6;2.617993878;MARIA EMILIA SORIA;F;Voto 2018;;;2017 a 2021;Río Negro
+2019;Argentina;Diputados;A favor;A favor;108;0;#32a852;-1.237179148;0.714285714;4;2.617993878;JOSE LUIS RICCARDO;M;Voto 2018;;;2017 a 2021;San Luis
+2019;Argentina;Diputados;A favor;A favor;108;0;#32a852;-0.989743319;0.571428571;2;2.617993878;ROXANA NAHIR REYES;F;Voto 2018;;;2017 a 2021;Santa Cruz
+2019;Argentina;Diputados;A favor;A favor;108;0;#32a852;-1.554737745;1.015760865;7;2.562878217;JUAN BENEDICTO VAZQUEZ;M;Voto 2018;;;2017 a 2021;Santa Cruz
+2019;Argentina;Diputados;A favor;A favor;108;0;#32a852;-1.074198615;0.706511543;3;2.559816236;ALBOR ANGEL CANTARD;M;Voto 2018;;;2017 a 2021;Santa Fe
+2019;Argentina;Diputados;A favor;A favor;108;0;#32a852;-1.306595105;0.873038938;5;2.552544031;GONZALO PEDRO ANTONIO DEL CERRO;M;Voto 2018;;;2017 a 2021;Santa Fe
+2019;Argentina;Diputados;A favor;A favor;108;0;#32a852;-1.652477549;1.126640116;8;2.543194053;JOSEFINA VICTORIA GONZALEZ;F;Voto 2018;;;2017 a 2021;Santa Fe
+2019;Argentina;Diputados;A favor;A favor;108;0;#32a852;-1.404260647;0.983273891;6;2.530727415;ALEJANDRA RODENAS;F;Voto 2018;;;2017 a 2021;Santa Fe
+2019;Argentina;Diputados;A favor;A favor;108;0;#32a852;-1.155738563;0.839693218;4;2.513274123;AGUSTIN OSCAR ROSSI;M;Voto 2018;;;2017 a 2021;Santa Fe
+2019;Argentina;Diputados;A favor;A favor;108;0;#32a852;-0.809016994;0.587785252;1;2.513274123;MARTIN ALEJANDRO PEREZ;M;Voto 2018;;;2017 a 2021;Tierra del Fuego
+2019;Argentina;Diputados;A favor;A favor;108;0;#32a852;-0.906689532;0.695727347;2;2.487094184;HECTOR ANTONIO STEFANI;M;Voto 2018;;;2017 a 2021;Tierra del Fuego
+2019;Argentina;Diputados;A favor;A favor;108;0;#32a852;-1.46554666;1.140680752;7;2.480204727;PABLO RAUL YEDLIN;M;Voto 2018;;;2017 a 2021;Tucumán
+2019;Argentina;Diputados;A favor;A favor;108;1;#32a852;-1.563662965;1.246979604;8;2.468394228;SERGIO MASSA *;M;https://www.infobae.com/politica/2019/04/29/sergio-massa-estoy-en-la-etapa-marie-kondo-de-mi-carrera-politica/;;;2019 a 2023;Buenos Aires
+2019;Argentina;Diputados;A favor;A favor;108;1;#32a852;-1.214730712;0.996903732;5;2.454369261;LUANA VOLNOVICH;F;https://twitter.com/luanavolnovich/status/1007034366848008193 ;;;2019 a 2023;Buenos Aires
+2019;Argentina;Diputados;A favor;A favor;108;1;#32a852;-1.313219045;1.101921617;6;2.443460953;LEONARDO GROSSO;M;Voto 2018;;;2019 a 2023;Buenos Aires
+2019;Argentina;Diputados;A favor;A favor;108;1;#32a852;-0.984914284;0.826441212;3;2.443460953;MARIA CRISTINA ALVAREZ RODRIGUEZ;F;Voto 2018;;;2019 a 2023;Buenos Aires
+2019;Argentina;Diputados;A favor;A favor;108;1;#32a852;-1.061635465;0.955900866;4;2.408554368;MAXIMO CARLOS KIRCHNER;M;Voto 2018;;;2019 a 2023;Buenos Aires
+2019;Argentina;Diputados;A favor;A favor;108;1;#32a852;-1.366344406;1.257808633;7;2.397531236;CECILIA MOREAU;F;Voto 2018;;;2019 a 2023;Buenos Aires
+2019;Argentina;Diputados;A favor;A favor;108;1;#32a852;-1.466103744;1.360345476;8;2.393594403;ANDRES LARROQUE;M;Voto 2018;;;2019 a 2023;Buenos Aires
+2019;Argentina;Diputados;A favor;A favor;108;1;#32a852;-1.212183053;1.212183053;6;2.35619449;FLORENCIA LAMPREABE;F;https://twitter.com/FlorLampreabe/status/983816897199210496;;;2019 a 2023;Buenos Aires
+2019;Argentina;Diputados;A favor;A favor;108;1;#32a852;-1.111167799;1.111167799;5;2.35619449;WADO DE PEDRO;M;Voto 2018;;;2019 a 2023;Buenos Aires
+2019;Argentina;Diputados;A favor;A favor;108;1;#32a852;-0.808122036;0.808122036;2;2.35619449;JUAN FACUNDO MOYANO;M;Voto 2018;;;2019 a 2023;Buenos Aires
+2019;Argentina;Diputados;A favor;A favor;108;1;#32a852;-0.707106781;0.707106781;1;2.35619449;DANIELA MARINA VILAR;F;https://twitter.com/danyvilar/status/1027610716906434560;;;2019 a 2023;Buenos Aires
+2019;Argentina;Diputados;A favor;A favor;108;1;#32a852;-0.882310677;0.935194682;3;2.327105669;CARLOS DANIEL CASTAGNETO;M;Voto 2018;;;2019 a 2023;Buenos Aires
+2019;Argentina;Diputados;A favor;A favor;108;1;#32a852;-1.360345476;1.466103744;8;2.318794578;LUIS RODOLFO TAILHADE;M;Voto 2018;;;2019 a 2023;Buenos Aires
+2019;Argentina;Diputados;A favor;A favor;108;1;#32a852;-1.257808633;1.366344406;7;2.314857745;MARIA ROSA MARTINEZ;F;https://twitter.com/mrmartinez55/status/986254244000002048;;;2019 a 2023;Buenos Aires
+2019;Argentina;Diputados;A favor;A favor;108;1;#32a852;-0.955900866;1.061635465;4;2.303834613;MARIA JIMENA LOPEZ;F;http://nden.com.ar/nota/3101/jimena_lopez_hay_que_despenalizar_el_aborto_y_que_se_pueda_hacer_en_los_hospitales;;;2019 a 2023;Buenos Aires
+2019;Argentina;Diputados;A favor;A favor;108;1;#32a852;-1.101921617;1.313219045;6;2.268928028;MIGUEL ANGEL BAZZE;M;Voto 2018;;;2019 a 2023;Buenos Aires
+2019;Argentina;Diputados;A favor;A favor;108;1;#32a852;-0.996903732;1.214730712;5;2.25801972;SILVIA GABRIELA LOSPENNATO;F;Voto 2018;;;2019 a 2023;Buenos Aires
+2019;Argentina;Diputados;A favor;A favor;108;1;#32a852;-1.246979604;1.563662965;8;2.243994753;WALDO EZEQUIEL WOLFF;M;Voto 2018;;;2019 a 2023;Buenos Aires
+2019;Argentina;Diputados;A favor;A favor;108;1;#32a852;-1.140680752;1.46554666;7;2.232184254;SEBASTIAN NICOLAS SALVADOR;M;https://www.lanoticiaweb.com.ar/117607/sebastian-salvador-el-radicalismo-de-la-provincia-goza-de-buena-salud/;;;2019 a 2023;Buenos Aires
+2019;Argentina;Diputados;A favor;A favor;108;1;#32a852;-0.695727347;0.906689532;2;2.225294796;MARIA DE LAS MERCEDES JOURY;F;https://www.infobae.com/politica/2019/06/26/el-aborto-vuelve-a-dividir-al-gobierno-hasta-se-evaluo-armar-una-paso-entre-verdes-y-celestes/;;;2019 a 2023;Buenos Aires
+2019;Argentina;Diputados;A favor;A favor;108;1;#32a852;-0.767775332;1.031301248;3;2.210750386;RAUL SEBASTIAN GARCIA DE LUCA;M;https://www.infobae.com/politica/2019/06/26/el-aborto-vuelve-a-dividir-al-gobierno-hasta-se-evaluo-armar-una-paso-entre-verdes-y-celestes/;;;2019 a 2023;Buenos Aires
+2019;Argentina;Diputados;A favor;A favor;108;1;#32a852;-0.839693218;1.155738563;4;2.199114858;KARINA VERONICA BANFI;F;Voto 2018;;;2019 a 2023;Buenos Aires
+2019;Argentina;Diputados;A favor;A favor;108;1;#32a852;-0.587785252;0.809016994;1;2.199114858;NESTOR ANTONIO PITROLA;M;plataforma;;;2019 a 2023;Buenos Aires
+2019;Argentina;Diputados;A favor;A favor;108;1;#32a852;-0.983273891;1.404260647;6;2.181661565;MAXIMILIANO CARLOS FRANCISCO FERRARO;M;https://twitter.com/Maxiferraro/status/1027430625131802624;;;2019 a 2023;CABA
+2019;Argentina;Diputados;A favor;A favor;108;1;#32a852;-1.126640116;1.652477549;8;2.169194927;MARÍA DOLORES MARTINEZ;F;https://www.nueva-ciudad.com.ar/notas/201906/41027-verdes-y-celestes-quienes-estan-a-favor-y-en-contra-del-aborto-legal-en-las-listas-portenas.html;;;2019 a 2023;CABA
+2019;Argentina;Diputados;A favor;A favor;108;1;#32a852;-0.873038938;1.306595105;5;2.159844949;FERNANDO EZEQUIEL SOLANAS;M;Voto 2018 (como senador);;;2019 a 2023;CABA
+2019;Argentina;Diputados;A favor;A favor;108;1;#32a852;-1.015760865;1.554737745;7;2.149510763;PAULA ANDREA PENACCA;F;https://twitter.com/PaulaPenacca/status/965613407205404672;;;2019 a 2023;CABA
+2019;Argentina;Diputados;A favor;A favor;108;1;#32a852;-1;1.732050808;8;2.094395102;ITAÍ HAGMAN;M;https://twitter.com/ItaiHagman/status/383591656173207552;;;2019 a 2023;CABA
+2019;Argentina;Diputados;A favor;A favor;108;1;#32a852;-0.857142857;1.484614978;6;2.094395102;VICTORIA ANALIA DONDA PEREZ;F;Voto 2018;;;2019 a 2023;CABA
+2019;Argentina;Diputados;A favor;A favor;108;1;#32a852;-0.714285714;1.237179148;4;2.094395102;MARIO RAUL NEGRI;M;Voto 2018;;;2019 a 2023;Córdoba
+2019;Argentina;Diputados;A favor;A favor;108;1;#32a852;-0.642857143;1.113461233;3;2.094395102;EDUARDO GABRIEL FERNANDEZ;M;https://twitter.com/efernandez_2019/status/1027169243111022592;;;2019 a 2023;Córdoba
+2019;Argentina;Diputados;A favor;A favor;108;1;#32a852;-0.571428571;0.989743319;2;2.094395102;GABRIELA BEATRIZ ESTEVEZ;F;Voto 2018;;;2019 a 2023;Córdoba
+2019;Argentina;Diputados;A favor;A favor;108;1;#32a852;-0.883902301;1.633308395;7;2.066837272;CLAUDIA ROXANA MARTINEZ;F;http://catolicas.org.ar/comunicado-situacion-del-aborto-no-punible-cordoba/;;;2019 a 2023;Córdoba
+2019;Argentina;Diputados;A favor;A favor;108;1;#32a852;-0.740766301;1.385876273;5;2.061670179;"JOSE ""PITIN"" RUIZ ARAGON";M;Voto 2018;;;2019 a 2023;Corrientes
+2019;Argentina;Diputados;A favor;A favor;108;1;#32a852;-0.4539905;0.891006524;1;2.042035225;NANCY SAND;F;http://radioseminare.com/actualidad/nancy-sand-con-sinceridad-sin-hipocresia-decidi-por-el-aborto-legal/;;;2019 a 2023;Corrientes
+2019;Argentina;Diputados;A favor;A favor;108;1;#32a852;-0.867767478;1.801937736;8;2.019595277;MARÍA LUCILA MASIN;F;Voto 2018;;;2019 a 2023;Chaco
+2019;Argentina;Diputados;A favor;A favor;108;1;#32a852;-0.724488449;1.553670492;6;2.00712864;SANTIAGO NICOLAS IGON;M;Voto 2018;;;2019 a 2023;Chubut
+2019;Argentina;Diputados;A favor;A favor;108;1;#32a852;-0.581052347;1.305064939;4;1.989675347;GABRIELA MABEL LENA;F;http://entreriosahora.com/la-diputada-que-habla-de-aborto-legal/;;;2019 a 2023;Entre Ríos
+2019;Argentina;Diputados;A favor;A favor;108;1;#32a852;-0.746005789;1.700721892;7;1.984163781;LUIS EUGENIO BASTERRA;M;Voto 2018;;;2019 a 2023;Formosa
+2019;Argentina;Diputados;A favor;A favor;108;1;#32a852;-0.509245413;1.180563566;3;1.978039819;MARIA CAROLINA MOISES;F;Voto 2018;;;2019 a 2023;Jujuy
+2019;Argentina;Diputados;A favor;A favor;108;1;#32a852;-0.601359679;1.451810694;5;1.963495408;HERNAN PEREZ ARAUJO;M;;https://twitter.com/hperezaraujo/status/1028465681971462144;;2019 a 2023;La Pampa
+2019;Argentina;Diputados;A favor;A favor;108;1;#32a852;-0.437352494;1.055862323;2;1.963495408;CRISTINA BRITEZ;F;Voto 2018;;;2019 a 2023;Misiones
+2019;Argentina;Diputados;A favor;A favor;108;1;#32a852;-0.730682049;1.861747497;8;1.944795452;DARIO MARTINEZ;M;Voto 2018;;;2019 a 2023;Neuquén
+2019;Argentina;Diputados;A favor;A favor;108;1;#32a852;-0.586320246;1.610901636;6;1.919862177;SUSANA GRACIELA LANDRISCINI;F;https://www.elcohetealaluna.com/que-el-senado-oiga/;;;2019 a 2023;Río Negro
+2019;Argentina;Diputados;A favor;A favor;108;1;#32a852;-0.6030133;1.756517735;7;1.90149029;SERGIO JAVIER WISKY;M;Voto 2018;;;2019 a 2023;Río Negro
+2019;Argentina;Diputados;A favor;A favor;108;1;#32a852;-0.441452849;1.358652166;4;1.884955592;PABLO GERARDO GONZALEZ;M;https://www.tiemposur.com.ar/nota/178338-para-gonzalez-hay-que-debatir-ideas-y-propuestas-y-no-tanto-marketing-politico;;;2019 a 2023;Santa Cruz
+2019;Argentina;Diputados;A favor;A favor;108;1;#32a852;-0.309016994;0.951056516;1;1.884955592;MARCOS CLERI;M;Voto 2018;;;2019 a 2023;Santa Fe
+2019;Argentina;Diputados;A favor;A favor;108;1;#32a852;-0.589510349;1.911145612;8;1.869995627;GERMAN PEDRO MARTINEZ;M;https://twitter.com/GERMANPMARTINEZ/status/412756693114945536;;;2019 a 2023;Santa Fe
+2019;Argentina;Diputados;A favor;A favor;108;1;#32a852;-0.456161636;1.503763385;5;1.865320638;ENRIQUE ELOY ESTEVEZ;M;https://www.rosarioplus.com/ensacoycorbata/Enrique-Estevez-pidio-a-Contigiani-que-reconsidere-su-postura-sobre-la-ley-del-aborto-20180605-0028.html;;;2019 a 2023;Santa Fe
+2019;Argentina;Diputados;A favor;A favor;108;1;#32a852;-0.368747013;1.231700802;3;1.861684535;JOSE ANATOLIO OJEDA;M;Voto 2018 (como senador);;;2019 a 2023;Tierra del Fuego
+2019;Argentina;Diputados;A favor;A favor;108;1;#32a852;-0.443689792;1.655872845;6;1.832595715;MARIO ALBERTO LEITO;M;https://www.lagaceta.com.ar/nota/814320/actualidad/precandidatos-fijan-postura-ante-discusion-interrupcion-voluntaria-embarazo.html;;;2019 a 2023;Tucumán
+2019;Argentina;Diputados;Probablemente a favor;Probablemente a favor;8;1;#74b084;-0.295793194;1.10391523;2;1.832595715;CLAUDIA BEATRIZ ORMACHEA;F;Dirigente feminista, Secretaria Nacional de Derechos Humanos, Género e Igualdad de la Asociación Bancaria. https://www.pagina12.com.ar/202957-te-la-debo;;;2019 a 2023;Buenos Aires
+2019;Argentina;Diputados;Probablemente a favor;Probablemente a favor;8;1;#74b084;-0.455901619;1.80031478;7;1.818816799;EMILIANO BENJAMIN YACOBITTI;M;https://www.nueva-ciudad.com.ar/notas/201906/41027-verdes-y-celestes-quienes-estan-a-favor-y-en-contra-del-aborto-legal-en-las-listas-portenas.html;;;2019 a 2023;CABA
+2019;Argentina;Diputados;Probablemente a favor;Probablemente a favor;8;1;#74b084;-0.445041868;1.949855824;8;1.795195802;ESTELA BEATRIZ HERNANDEZ;F;https://www.elpatagonico.com/diputada-pide-informes-falta-misoprostol-los-hospitales-chubut-n3091052;https://twitter.com/DipEstelaH;;2019 a 2023;Chubut
+2019;Argentina;Diputados;Probablemente a favor;Probablemente a favor;8;1;#74b084;-0.297016701;1.397353715;4;1.780235837;BLANCA INES OSUNA;F;https://www.paginapolitica.com/actualidad/aborto-legal-la-postura-de-quienes-son-candidatos-el-domingo.htm;;;2019 a 2023;Entre Ríos
+2019;Argentina;Diputados;Probablemente a favor;Probablemente a favor;8;1;#74b084;-0.306570506;1.541234012;5;1.767145868;MARISA UCEDA;F;https://www.mendozapost.com/nota/123723-marisa-uceda-y-el-aborto-legal-el-proyecto-anterior-me-parecia-bueno/;;;2019 a 2023;Mendoza
+2019;Argentina;Diputados;Probablemente a favor;Probablemente a favor;8;1;#74b084;-0.29768259;1.688241862;6;1.745329252;JUANA CARMONA;F;https://twitter.com/juanaloucarmona/status/1158480063127572480;;;2019 a 2023;Mendoza
+2019;Argentina;Diputados;Probablemente a favor;Probablemente a favor;8;1;#74b084;-0.223261943;1.266181397;3;1.745329252;ALEJANDRO CACACE;M;http://lagaceta-digital.com.ar/la-postura-de-los-candidatos-a-diputados-nacional-por-san-luis-con-respecto-al-aborto/;;;2019 a 2023;San Luis
+2019;Argentina;Diputados;Probablemente a favor;Probablemente a favor;8;1;#74b084;-0.305675668;1.831813849;7;1.736143309;NILDA MABEL CARRIZO;F;https://twitter.com/mabelcarrizotuc/status/1101136589865013249;;;2019 a 2023;Tucumán
+2019;Argentina;Diputados;No se expresó;No se expresó;47;0;#262626;-0.156434465;0.987688341;1;1.727875959;"HÉCTOR ""GALLEGO"" FERNÁNDEZ *";M;Voto 2018;https://twitter.com/GallegoPM;*Reemplazaría a Fernando Espinoza, nuevo intendente de La Matanza (PBA);2017 a 2021;Buenos Aires
+2019;Argentina;Diputados;No se expresó;No se expresó;47;0;#262626;-0.298084532;1.977661652;8;1.720395977;ADRIANA CÁCERES *;F;Voto 2018;https://twitter.com/AdriCCaceres;*Reemplazaría a Guillermo Montenegro, nuevo intendente de Gral. Pueyrredón (PBA);2017 a 2021;Buenos Aires
+2019;Argentina;Diputados;No se expresó;No se expresó;47;0;#262626;-0.149172791;1.133079842;2;1.701696021;BERNARDO JOSÉ HERRERA *;M;Voto 2018;NA;*Reemplazó en 2019 al fallecido Hugo Infante;2017 a 2021;Santiago del Estero
+2019;Argentina;Diputados;No se expresó;No se expresó;47;0;#262626;-0.149326376;1.420745565;4;1.675516082;MARÍA LUISA MONTOTO DE ROGEL *;F;Voto 2018;NA;*Reemplazaría a Claudia Ledesma, nueva senadora;2017 a 2021;Santiago del Estero
+2019;Argentina;Diputados;No se expresó;No se expresó;47;1;#262626;-0.154026935;1.563861713;5;1.668971097;LILIANA YAMBRUN;F;;NA;;2019 a 2023;Buenos Aires
+2019;Argentina;Diputados;No se expresó;No se expresó;47;1;#262626;-0.149409845;1.70776234;6;1.658062789;ALICIA NOEMI APARICIO;F;;NA;;2019 a 2023;Buenos Aires
+2019;Argentina;Diputados;No se expresó;No se expresó;47;1;#262626;-0.153361642;1.850799773;7;1.653469818;MARIA LUJAN REY;F;;https://twitter.com/MariaLujan_Rey;;2019 a 2023;Buenos Aires
+2019;Argentina;Diputados;No se expresó;No se expresó;47;1;#262626;-0.149460187;1.994407594;8;1.645596152;MARIANA STILMAN;F;;https://twitter.com/MarianStil;;2019 a 2023;Buenos Aires
+2019;Argentina;Diputados;No se expresó;No se expresó;47;1;#262626;-0.074757637;1.283539061;3;1.628973969;MONICA EDITH FRADE;F;;https://twitter.com/monicafrade2;;2019 a 2023;Buenos Aires
+2019;Argentina;Diputados;No se expresó;No se expresó;47;1;#262626;1.22E-16;2;8;1.570796327;"ALEJANDRO ""TOPO"" RODRIGUEZ";M;;https://twitter.com/TOPOarg;;2019 a 2023;Buenos Aires
+2019;Argentina;Diputados;No se expresó;No se expresó;47;1;#262626;1.14E-16;1.857142857;7;1.570796327;MARIANA DE JESUS ZUVIC;F;;https://twitter.com/MarianaZuvic;;2019 a 2023;CABA
+2019;Argentina;Diputados;No se expresó;No se expresó;47;1;#262626;1.05E-16;1.714285714;6;1.570796327;LUCIA CORPACCI;F;;https://twitter.com/LuciaCorpacci;;2019 a 2023;Catamarca
+2019;Argentina;Diputados;No se expresó;No se expresó;47;1;#262626;9.62E-17;1.571428571;5;1.570796327;VICTOR HUGO ROMERO;M;;NA;;2019 a 2023;Córdoba
+2019;Argentina;Diputados;No se expresó;No se expresó;47;1;#262626;8.75E-17;1.428571429;4;1.570796327;CARLOS MARIO GUTIERREZ;M;;https://twitter.com/Leg_Gutierrez;;2019 a 2023;Córdoba
+2019;Argentina;Diputados;No se expresó;No se expresó;47;1;#262626;7.00E-17;1.142857143;2;1.570796327;FABIAN BORDA;M;;NA;;2019 a 2023;Corrientes
+2019;Argentina;Diputados;No se expresó;No se expresó;47;1;#262626;6.12E-17;1;1;1.570796327;JORGE VARA;M;;https://twitter.com/JorgeVara8;;2019 a 2023;Corrientes
+2019;Argentina;Diputados;No se expresó;No se expresó;47;1;#262626;0.074757637;1.283539061;3;1.512618685;GERARDO CIPOLINI;M;;https://twitter.com/gcipolini;;2019 a 2023;Chaco
+2019;Argentina;Diputados;No se expresó;No se expresó;47;1;#262626;0.149460187;1.994407594;8;1.495996502;"IGNACIO ""NACHO"" TORRES";M;;https://twitter.com/NachoTorresCH;;2019 a 2023;Chubut
+2019;Argentina;Diputados;No se expresó;No se expresó;47;1;#262626;0.153361642;1.850799773;7;1.488122836;MARCELO PABLO CASARETTO;M;;https://twitter.com/mpcasaretto;;2019 a 2023;Entre Ríos
+2019;Argentina;Diputados;No se expresó;No se expresó;47;1;#262626;0.149409845;1.70776234;6;1.483529864;GUSTAVO RENE HEIN;M;;https://twitter.com/gustavohein_;;2019 a 2023;Entre Ríos
+2019;Argentina;Diputados;No se expresó;No se expresó;47;1;#262626;0.154026935;1.563861713;5;1.472621556;MARIA GRACIELA PAROLA;F;;NA;;2019 a 2023;Formosa
+2019;Argentina;Diputados;No se expresó;No se expresó;47;1;#262626;0.149326376;1.420745565;4;1.466076572;RICARDO BURYAILE;M;;https://twitter.com/BuryaileRicardo;;2019 a 2023;Formosa
+2019;Argentina;Diputados;No se expresó;No se expresó;47;1;#262626;0.149172791;1.133079842;2;1.439896633;CARLOS DANIEL CANTERO;M;;NA;;2019 a 2023;Jujuy
+2019;Argentina;Diputados;No se expresó;No se expresó;47;1;#262626;0.298084532;1.977661652;8;1.421196677;"JORGE ""COLO"" RIZZOTTI";M;;https://twitter.com/RizzottiColo;;2019 a 2023;Jujuy
+2019;Argentina;Diputados;No se expresó;No se expresó;47;1;#262626;0.156434465;0.987688341;1;1.413716694;MARTIN ANTONIO BERHONGARAY;M;;https://twitter.com/MBerhongaray;;2019 a 2023;La Pampa
+2019;Argentina;Diputados;No se expresó;No se expresó;47;1;#262626;0.305675668;1.831813849;7;1.405449345;SERGIO CASAS;M;;https://twitter.com/SergioGCasas;;2019 a 2023;La Rioja
+2019;Argentina;Diputados;No se expresó;No se expresó;47;1;#262626;0.29768259;1.688241862;6;1.396263402;HILDA AGUIRRE DE SORIA;F;;https://twitter.com/BebaAguirre2;;2019 a 2023;La Rioja
+2019;Argentina;Diputados;No se expresó;No se expresó;47;1;#262626;0.223261943;1.266181397;3;1.396263402;FELIPE ÁLVAREZ;M;;https://twitter.com/felipealvarezlr?lang=es;;2019 a 2023;La Rioja
+2019;Argentina;Diputados;No se expresó;No se expresó;47;1;#262626;0.306570506;1.541234012;5;1.374446786;ALEJANDRO BERMEJO;M;;https://twitter.com/AleBermejoMza;;2019 a 2023;Mendoza
+2019;Argentina;Diputados;No se expresó;No se expresó;47;1;#262626;0.297016701;1.397353715;4;1.361356817;JIMENA LATORRE;F;;https://twitter.com/JimehLatorre;;2019 a 2023;Mendoza
+2019;Argentina;Diputados;No se expresó;No se expresó;47;1;#262626;0.445041868;1.949855824;8;1.346396852;"""CACHO"" BARBARO";M;;https://twitter.com/CachoBarbaro;;2019 a 2023;Misiones
+2019;Argentina;Diputados;No se expresó;No se expresó;47;1;#262626;0.455901619;1.80031478;7;1.322775854;ALFREDO O.  SCHIAVONI;M;;https://twitter.com/alfreschiavoni;;2019 a 2023;Misiones
+2019;Argentina;Diputados;No se expresó;No se expresó;47;1;#262626;0.443689792;1.655872845;6;1.308996939;DIEGO HORACIO SARTORI;M;;https://twitter.com/SartoriDiegoH;;2019 a 2023;Misiones
+2019;Argentina;Diputados;No se expresó;No se expresó;47;1;#262626;0.295793194;1.10391523;2;1.308996939;MARTIN IGNACIO SORIA;M;;https://twitter.com/SoriaEnAccion;;2019 a 2023;Río Negro
+2019;Argentina;Diputados;No se expresó;No se expresó;47;1;#262626;0.368747013;1.231700802;3;1.279908118;NOELIA EDITH BONETTO;F;;NA;;2019 a 2023;Salta
+2019;Argentina;Diputados;No se expresó;No se expresó;47;1;#262626;0.456161636;1.503763385;5;1.276272016;CARLOS PONCE;M;;https://twitter.com/carlosponce668;;2019 a 2023;San Luis
+2019;Argentina;Diputados;No se expresó;No se expresó;47;1;#262626;0.589510349;1.911145612;8;1.271597026;MARCELA PAOLA VESSVESSIAN;F;;NA;;2019 a 2023;Santa Cruz
+2019;Argentina;Diputados;No se expresó;No se expresó;47;1;#262626;0.441452849;1.358652166;4;1.256637061;ALEJANDRA DEL HUERTO OBEID;F;;https://twitter.com/AlejandraObeid;;2019 a 2023;Santa Fe
+2019;Argentina;Diputados;No se expresó;No se expresó;47;1;#262626;0.309016994;0.951056516;1;1.256637061;JORGE ALBERTO HOFFMANN;M;;https://twitter.com/jorge_hoffmann;;2019 a 2023;Santa Fe
+2019;Argentina;Diputados;No se expresó;No se expresó;47;1;#262626;0.6030133;1.756517735;7;1.240102363;XIMENA GARCIA;F;;https://twitter.com/XimenaGarciaBl;;2019 a 2023;Santa Fe
+2019;Argentina;Diputados;No se expresó;No se expresó;47;1;#262626;0.586320246;1.610901636;6;1.221730476;LAURA CAROLINA CASTETS;F;;NA;;2019 a 2023;Santa Fe
+2019;Argentina;Diputados;No se expresó;No se expresó;47;1;#262626;0.730682049;1.861747497;8;1.196797201;DANIEL AGUSTIN BRUE;M;;NA;;2019 a 2023;Santiago del Estero
+2019;Argentina;Diputados;No se expresó;No se expresó;47;1;#262626;0.601359679;1.451810694;5;1.178097245;RICARDO DANIEL DAIVES;M;;https://twitter.com/ricardodaives;;2019 a 2023;Santiago del Estero
+2019;Argentina;Diputados;No se expresó;No se expresó;47;1;#262626;0.437352494;1.055862323;2;1.178097245;FEDERICO FRIGERIO;M;;https://twitter.com/fedefrigerio;;2019 a 2023;Tierra del Fuego
+2019;Argentina;Diputados;No se expresó;No se expresó;47;1;#262626;0.509245413;1.180563566;3;1.163552835;CARLOS ANIBAL CISNEROS;M;;NA;;2019 a 2023;Tucumán
+2019;Argentina;Diputados;No se expresó;No se expresó;47;1;#262626;0.746005789;1.700721892;7;1.157428872;GRACIELA DEL VALLE GUTIERREZ;F;;NA;;2019 a 2023;Tucumán
+2019;Argentina;Diputados;No se expresó;No se expresó;47;1;#262626;0.581052347;1.305064939;4;1.151917306;DOMINGO AMAYA;M;;https://twitter.com/domingoamayaok;;2019 a 2023;Tucumán
+2019;Argentina;Diputados;Probablemente en contra;Probablemente en contra;2;1;#8bbad9;0.724488449;1.553670492;6;1.134464014;CARLOS RAMIRO GUTIERREZ;M;https://www.lapoliticaonline.com/nota/120107-los-verdes-monopolizaron-las-listas-que-armo-maximo/;;;2019 a 2023;Buenos Aires
+2019;Argentina;Diputados;Probablemente en contra;Probablemente en contra;2;1;#8bbad9;0.867767478;1.801937736;8;1.121997376;LUCAS JAVIER GODOY;M;https://radiodinamo.com/lucas-godoy-en-contra-de-la-legalizacion-del-aborto/;;;2019 a 2023;Salta
+2019;Argentina;Diputados;En contra;En contra;90;0;#3394d4;0.4539905;0.891006524;1;1.099557429;JUAN AICEGA;M;Voto 2018;;;2017 a 2021;Buenos Aires
+2019;Argentina;Diputados;En contra;En contra;90;0;#3394d4;0.740766301;1.385876273;5;1.079922475;PABLO MIGUEL ANSALONI;M;Voto 2018;;;2017 a 2021;Buenos Aires
+2019;Argentina;Diputados;En contra;En contra;90;0;#3394d4;0.883902301;1.633308395;7;1.074755381;HERNAN BERISSO;M;Voto 2018;;;2017 a 2021;Buenos Aires
+2019;Argentina;Diputados;En contra;En contra;90;0;#3394d4;1;1.732050808;8;1.047197551;MARCELA CAMPAGNOLI;F;Voto 2018;;;2017 a 2021;Buenos Aires
+2019;Argentina;Diputados;En contra;En contra;90;0;#3394d4;0.857142857;1.484614978;6;1.047197551;JAVIER CAMPOS;M;Voto 2018;;;2017 a 2021;Buenos Aires
+2019;Argentina;Diputados;En contra;En contra;90;0;#3394d4;0.714285714;1.237179148;4;1.047197551;EZEQUIEL FERNANDEZ LANGAN;M;Voto 2018;;;2017 a 2021;Buenos Aires
+2019;Argentina;Diputados;En contra;En contra;90;0;#3394d4;0.642857143;1.113461233;3;1.047197551;HECTOR FLORES;M;Voto 2018;;;2017 a 2021;Buenos Aires
+2019;Argentina;Diputados;En contra;En contra;90;0;#3394d4;0.571428571;0.989743319;2;1.047197551;MARTIN NICOLAS MEDINA;M;Voto 2018;;;2017 a 2021;Buenos Aires
+2019;Argentina;Diputados;En contra;En contra;90;0;#3394d4;1.015760865;1.554737745;7;0.992081891;MARIA CARLA PICCOLOMINI;F;Voto 2018;;;2017 a 2021;Buenos Aires
+2019;Argentina;Diputados;En contra;En contra;90;0;#3394d4;0.873038938;1.306595105;5;0.981747704;NATALIA SOLEDAD VILLA;F;Voto 2018;;;2017 a 2021;Buenos Aires
+2019;Argentina;Diputados;En contra;En contra;90;0;#3394d4;1.126640116;1.652477549;8;0.972397726;EDUARDO SEGUNDO BRIZUELA DEL MORAL;M;Voto 2018;;;2017 a 2021;Catamarca
+2019;Argentina;Diputados;En contra;En contra;90;0;#3394d4;0.983273891;1.404260647;6;0.959931089;SILVANA MICAELA GINOCCHIO;F;Voto 2018;;;2017 a 2021;Catamarca
+2019;Argentina;Diputados;En contra;En contra;90;0;#3394d4;0.839693218;1.155738563;4;0.942477796;GUSTAVO ARTURO SAADI;M;Voto 2018;;;2017 a 2021;Catamarca
+2019;Argentina;Diputados;En contra;En contra;90;0;#3394d4;0.587785252;0.809016994;1;0.942477796;JUAN MOSQUEDA;M;Voto 2018;;;2017 a 2021;Chaco
+2019;Argentina;Diputados;En contra;En contra;90;0;#3394d4;0.767775332;1.031301248;3;0.930842268;ELDA PERTILE;F;Voto 2018;;;2017 a 2021;Chaco
+2019;Argentina;Diputados;En contra;En contra;90;0;#3394d4;0.695727347;0.906689532;2;0.916297857;ALICIA TERADA;F;Voto 2018;;;2017 a 2021;Chaco
+2019;Argentina;Diputados;En contra;En contra;90;0;#3394d4;1.140680752;1.46554666;7;0.9094084;ROSA ROSARIO MUÑOZ;F;Voto 2018;;;2017 a 2021;Chubut
+2019;Argentina;Diputados;En contra;En contra;90;0;#3394d4;1.246979604;1.563662965;8;0.897597901;ELISA MARIA AVELINA CARRIO;F;Voto 2018;;;2017 a 2021;CABA
+2019;Argentina;Diputados;En contra;En contra;90;0;#3394d4;0.996903732;1.214730712;5;0.883572934;JORGE RICARDO ENRIQUEZ;M;Voto 2018;;;2017 a 2021;CABA
+2019;Argentina;Diputados;En contra;En contra;90;0;#3394d4;1.101921617;1.313219045;6;0.872664626;PAULA MARIANA OLIVETO LAGO;F;Voto 2018;;;2017 a 2021;CABA
+2019;Argentina;Diputados;En contra;En contra;90;0;#3394d4;0.955900866;1.061635465;4;0.837758041;CARMEN POLLEDO;F;Voto 2018;;;2017 a 2021;CABA
+2019;Argentina;Diputados;En contra;En contra;90;0;#3394d4;1.257808633;1.366344406;7;0.826734909;HECTOR BALDASSI;M;Voto 2018;;;2017 a 2021;Córdoba
+2019;Argentina;Diputados;En contra;En contra;90;0;#3394d4;1.360345476;1.466103744;8;0.822798076;MARIA SOLEDAD CARRIZO;F;Voto 2018;;;2017 a 2021;Córdoba
+2019;Argentina;Diputados;En contra;En contra;90;0;#3394d4;0.882310677;0.935194682;3;0.814486984;PAULO LEONARDO CASSINERIO;M;Voto 2018;;;2017 a 2021;Córdoba
+2019;Argentina;Diputados;En contra;En contra;90;0;#3394d4;1.212183053;1.212183053;6;0.785398163;GABRIEL ALBERTO FRIZZA;M;Voto 2018;;;2017 a 2021;Córdoba
+2019;Argentina;Diputados;En contra;En contra;90;0;#3394d4;1.111167799;1.111167799;5;0.785398163;MARTIN MIGUEL LLARYORA;M;Voto 2018;;;2017 a 2021;Córdoba
+2019;Argentina;Diputados;En contra;En contra;90;0;#3394d4;0.808122036;0.808122036;2;0.785398163;DIEGO MATIAS MESTRE;M;Voto 2018;;;2017 a 2021;Córdoba
+2019;Argentina;Diputados;En contra;En contra;90;0;#3394d4;0.707106781;0.707106781;1;0.785398163;ESTELA MERCEDES REGIDOR BELLEDONE;F;Voto 2018;;;2017 a 2021;Corrientes
+2019;Argentina;Diputados;En contra;En contra;90;0;#3394d4;1.466103744;1.360345476;8;0.747998251;JORGE ANTONIO ROMERO;M;Voto 2018;;;2017 a 2021;Corrientes
+2019;Argentina;Diputados;En contra;En contra;90;0;#3394d4;1.366344406;1.257808633;7;0.744061418;MAYDA CRESTO;F;Voto 2018;;;2017 a 2021;Entre Ríos
+2019;Argentina;Diputados;En contra;En contra;90;0;#3394d4;1.061635465;0.955900866;4;0.733038286;ALICIA FREGONESE;F;Voto 2018;;;2017 a 2021;Entre Ríos
+2019;Argentina;Diputados;En contra;En contra;90;0;#3394d4;1.313219045;1.101921617;6;0.698131701;MARIO HORACIO ARCE;M;Voto 2018;;;2017 a 2021;Formosa
+2019;Argentina;Diputados;En contra;En contra;90;0;#3394d4;0.984914284;0.826441212;3;0.698131701;GUSTAVO RAMIRO FERNANDEZ PATRI;M;Voto 2018;;;2017 a 2021;Formosa
+2019;Argentina;Diputados;En contra;En contra;90;0;#3394d4;1.214730712;0.996903732;5;0.687223393;MARIA GABRIELA BURGOS;F;Voto 2018;;;2017 a 2021;Jujuy
+2019;Argentina;Diputados;En contra;En contra;90;0;#3394d4;1.563662965;1.246979604;8;0.673198426;JOSE LUIS MARTIARENA;M;Voto 2018;;;2017 a 2021;Jujuy
+2019;Argentina;Diputados;En contra;En contra;90;0;#3394d4;1.46554666;1.140680752;7;0.661387927;OSMAR ANTONIO MONALDI;M;Voto 2018;;;2017 a 2021;Jujuy
+2019;Argentina;Diputados;En contra;En contra;90;0;#3394d4;0.906689532;0.695727347;2;0.654498469;MARTIN MAQUIEYRA;M;Voto 2018;;;2017 a 2021;La Pampa
+2019;Argentina;Diputados;En contra;En contra;90;0;#3394d4;1.155738563;0.839693218;4;0.628318531;DANILO ADRIAN FLORES;M;Voto 2018;;;2017 a 2021;La Rioja
+2019;Argentina;Diputados;En contra;En contra;90;0;#3394d4;0.809016994;0.587785252;1;0.628318531;JULIO ENRIQUE SAHAD;M;Voto 2018;;;2017 a 2021;La Rioja
+2019;Argentina;Diputados;En contra;En contra;90;0;#3394d4;1.404260647;0.983273891;6;0.610865238;OMAR CHAFI FELIX;M;Voto 2018;;;2017 a 2021;Mendoza
+2019;Argentina;Diputados;En contra;En contra;90;0;#3394d4;1.652477549;1.126640116;8;0.598398601;LUIS ALFONSO PETRI;M;Voto 2018;;;2017 a 2021;Mendoza
+2019;Argentina;Diputados;En contra;En contra;90;0;#3394d4;1.306595105;0.873038938;5;0.589048623;JOSE LUIS RAMON;M;Voto 2018;;;2017 a 2021;Mendoza
+2019;Argentina;Diputados;En contra;En contra;90;0;#3394d4;1.074198615;0.706511543;3;0.581776417;FEDERICO RAUL ZAMARBIDE;M;Voto 2018;;;2017 a 2021;Mendoza
+2019;Argentina;Diputados;En contra;En contra;90;0;#3394d4;1.554737745;1.015760865;7;0.578714436;FLAVIA MORALES;F;Voto 2018;;;2017 a 2021;Misiones
+2019;Argentina;Diputados;En contra;En contra;90;0;#3394d4;1.732050808;1;8;0.523598776;LUIS MARIO PASTORI;M;Voto 2018;;;2017 a 2021;Misiones
+2019;Argentina;Diputados;En contra;En contra;90;0;#3394d4;1.484614978;0.857142857;6;0.523598776;RICARDO WELLBACH;M;Voto 2018;;;2017 a 2021;Misiones
+2019;Argentina;Diputados;En contra;En contra;90;0;#3394d4;1.237179148;0.714285714;4;0.523598776;ALMA CHANI SAPAG;F;Voto 2018;;;2017 a 2021;Neuquén
+2019;Argentina;Diputados;En contra;En contra;90;0;#3394d4;0.989743319;0.571428571;2;0.523598776;DAVID PABLO SCHLERETH;M;Voto 2018;;;2017 a 2021;Neuquén
+2019;Argentina;Diputados;En contra;En contra;90;0;#3394d4;1.633308395;0.883902301;7;0.496040945;MARTIN GRANDE;M;Voto 2018;;;2017 a 2021;Salta
+2019;Argentina;Diputados;En contra;En contra;90;0;#3394d4;1.385876273;0.740766301;5;0.490873852;SERGIO NAPOLEON LEAVY;M;Voto 2018;;;2017 a 2021;Salta
+2019;Argentina;Diputados;En contra;En contra;90;0;#3394d4;0.891006524;0.4539905;1;0.471238898;ANDRES ZOTTOS;M;Voto 2018;;;2017 a 2021;Salta
+2019;Argentina;Diputados;En contra;En contra;90;0;#3394d4;1.148956252;0.577027517;3;0.465421134;WALBERTO ENRIQUE ALLENDE;M;Voto 2018;;;2017 a 2021;San Juan
+2019;Argentina;Diputados;En contra;En contra;90;0;#3394d4;1.801937736;0.867767478;8;0.448798951;EDUARDO AUGUSTO CACERES;M;Voto 2018;;;2017 a 2021;San Juan
+2019;Argentina;Diputados;En contra;En contra;90;0;#3394d4;1.553670492;0.724488449;6;0.436332313;SANDRA DANIELA CASTRO;F;Voto 2018;;;2017 a 2021;San Juan
+2019;Argentina;Diputados;En contra;En contra;90;0;#3394d4;1.305064939;0.581052347;4;0.41887902;KARIM AUGUSTO ALUME SBODIO;M;Voto 2018;;;2017 a 2021;San Luis
+2019;Argentina;Diputados;En contra;En contra;90;0;#3394d4;1.700721892;0.746005789;7;0.413367454;VICTORIA ROSSO;F;Voto 2018;;;2017 a 2021;San Luis
+2019;Argentina;Diputados;En contra;En contra;90;0;#3394d4;1.451810694;0.601359679;5;0.392699082;ANTONIO JOSE CARAMBIA;M;Voto 2018;;;2017 a 2021;Santa Cruz
+2019;Argentina;Diputados;En contra;En contra;90;0;#3394d4;1.055862323;0.437352494;2;0.392699082;LUIS GUSTAVO CONTIGIANI;M;Voto 2018;;;2017 a 2021;Santa Fe
+2019;Argentina;Diputados;En contra;En contra;90;0;#3394d4;1.861747497;0.730682049;8;0.373999125;LUCIANO ANDRES LASPINA;M;Voto 2018;;;2017 a 2021;Santa Fe
+2019;Argentina;Diputados;En contra;En contra;90;0;#3394d4;1.610901636;0.586320246;6;0.34906585;MARIA LUCILA LEHMANN;F;Voto 2018;;;2017 a 2021;Santa Fe
+2019;Argentina;Diputados;En contra;En contra;90;0;#3394d4;1.208176227;0.439740184;3;0.34906585;GISELA SCAGLIA;F;Voto 2018;;;2017 a 2021;Santa Fe
+2019;Argentina;Diputados;En contra;En contra;90;0;#3394d4;1.756517735;0.6030133;7;0.330693964;NORMA AMANDA ABDALA DE MATARAZZO;F;Voto 2018;;;2017 a 2021;Santiago del Estero
+2019;Argentina;Diputados;En contra;En contra;90;0;#3394d4;1.358652166;0.441452849;4;0.314159265;BEATRIZ LUISA AVILA;F;Voto 2018;;;2017 a 2021;Tucumán
+2019;Argentina;Diputados;En contra;En contra;90;0;#3394d4;0.951056516;0.309016994;1;0.314159265;JOSE MANUEL CANO;M;Voto 2018;;;2017 a 2021;Tucumán
+2019;Argentina;Diputados;En contra;En contra;90;0;#3394d4;1.911145612;0.589510349;8;0.2991993;GLADYS MEDINA;F;Voto 2018;;;2017 a 2021;Tucumán
+2019;Argentina;Diputados;En contra;En contra;90;1;#3394d4;1.503763385;0.456161636;5;0.294524311;CARLOS AMERICO SELVA;M;Voto 2018;;;2019 a 2023;Buenos Aires
+2019;Argentina;Diputados;En contra;En contra;90;1;#3394d4;1.655872845;0.443689792;6;0.261799388;CRISTIAN ADRIAN RITONDO;M;https://www.lanacion.com.ar/politica/sin-titulo-nid2263584;;;2019 a 2023;Buenos Aires
+2019;Argentina;Diputados;En contra;En contra;90;1;#3394d4;1.10391523;0.295793194;2;0.261799388;ALBERTO EMILIO ASSEFF;M;http://airevision.com.ar/2019/06/23/alberto-asseff-voy-a-votar-en-contra-de-la-legalizacion-del-aborto/;;;2019 a 2023;Buenos Aires
+2019;Argentina;Diputados;En contra;En contra;90;1;#3394d4;1.80031478;0.455901619;7;0.248020473;GRACIELA CAMAÑO;F;Voto 2018;;;2019 a 2023;Buenos Aires
+2019;Argentina;Diputados;En contra;En contra;90;1;#3394d4;1.251057691;0.29650612;3;0.232710567;VICTORIA MORALES GORLERI;F;https://twitter.com/VMoralesGorleri/status/1015995011853320192;;;2019 a 2023;CABA
+2019;Argentina;Diputados;En contra;En contra;90;1;#3394d4;1.949855824;0.445041868;8;0.224399475;ALVARO GUSTAVO GONZALEZ;M;https://www.nueva-ciudad.com.ar/notas/201906/41027-verdes-y-celestes-quienes-estan-a-favor-y-en-contra-del-aborto-legal-en-las-listas-portenas.html;;;2019 a 2023;CABA
+2019;Argentina;Diputados;En contra;En contra;90;1;#3394d4;1.397353715;0.297016701;4;0.20943951;PABLO GABRIEL TONELLI;M;Voto 2018;;;2019 a 2023;CABA
+2019;Argentina;Diputados;En contra;En contra;90;1;#3394d4;1.541234012;0.306570506;5;0.196349541;MARCO JUAN LAVAGNA;M;Voto 2018;;;2019 a 2023;CABA
+2019;Argentina;Diputados;En contra;En contra;90;1;#3394d4;1.688241862;0.29768259;6;0.174532925;RUBEN HORACIO MANZI;M;https://www.elancasti.com.ar/opinion/2018/7/30/mi-posicion-en-torno-al-aborto-legal-378130.html;;;2019 a 2023;Catamarca
+2019;Argentina;Diputados;En contra;En contra;90;1;#3394d4;1.831813849;0.305675668;7;0.165346982;SOHER EL SUKARIA;F;http://www.laizquierdadiario.com/Aborto-legal-Que-opinan-los-legisladores-de-Cordoba;;;2019 a 2023;Córdoba
+2019;Argentina;Diputados;En contra;En contra;90;1;#3394d4;0.987688341;0.156434465;1;0.157079633;LEONOR MARIA MARTINEZ VILLADA;F;Voto 2018 (como senadora);;;2019 a 2023;Córdoba
+2019;Argentina;Diputados;En contra;En contra;90;1;#3394d4;1.977661652;0.298084532;8;0.14959965;LUIS ALFREDO JUEZ;M;https://www.clarin.com/politica/aborto-luis-juez-carta-senador-ernesto-martinez-vote_0_Bkdm7_R7Q.html;;;2019 a 2023;Córdoba
+2019;Argentina;Diputados;En contra;En contra;90;1;#3394d4;1.133079842;0.149172791;2;0.130899694;ALDO LEIVA;M;;https://twitter.com/AldoAdolfoLeiva;;2019 a 2023;Chaco
+2019;Argentina;Diputados;En contra;En contra;90;1;#3394d4;1.277020746;0.149262318;3;0.116355283;FRANCISCO SANCHEZ;M;https://twitter.com/fsancheznqn/status/965649935130644480;;;2019 a 2023;Neuquén
+2019;Argentina;Diputados;En contra;En contra;90;1;#3394d4;1.420745565;0.149326376;4;0.104719755;MIGUEL NANNI;M;Voto 2018;;;2019 a 2023;Salta
+2019;Argentina;Diputados;En contra;En contra;90;1;#3394d4;1.563861713;0.154026935;5;0.09817477;PABLO KOSINER;M;Voto 2018;;;2019 a 2023;Salta
+2019;Argentina;Diputados;En contra;En contra;90;1;#3394d4;1.70776234;0.149409845;6;0.087266463;JOSE LUIS GIOJA;M;Voto 2018;;;2019 a 2023;San Juan
+2019;Argentina;Diputados;En contra;En contra;90;1;#3394d4;1.850799773;0.153361642;7;0.082673491;GRACIELA MARIA CASELLES;F;Voto 2018;;;2019 a 2023;San Juan
+2019;Argentina;Diputados;En contra;En contra;90;1;#3394d4;1.994407594;0.149460187;8;0.074799825;MARCELO ORREGO;M;https://www.0264noticias.com.ar/noticias/2019/03/25/5660-marcelo-orrego-sobre-el-aborto-estoy-a-favor-de-las-dos-vidas;;;2019 a 2023;San Juan
+2019;Argentina;Diputados;En contra;En contra;90;1;#3394d4;2;0;8;0;VANESA LAURA MASSETANI;F;Voto 2018;;;2019 a 2023;Santa Fe
+2019;Argentina;Diputados;En contra;En contra;90;1;#3394d4;1.857142857;0;7;0;FEDERICO ANGELINI;M;https://twitter.com/fangelini/status/978038250404278273;;;2019 a 2023;Santa Fe
+2019;Argentina;Diputados;En contra;En contra;90;1;#3394d4;1.714285714;0;6;0;JOSE CARLOS NUÑEZ;M;Voto 2018;;;2019 a 2023;Santa Fe
+2019;Argentina;Diputados;En contra;En contra;90;1;#3394d4;1.571428571;0;5;0;GRACIELA NAVARRO;F;Voto 2018;;;2019 a 2023;Santiago del Estero
+2019;Argentina;Diputados;En contra;En contra;90;1;#3394d4;1.428571429;0;4;0;ESTELA MARY DEL ROSARIO NEDER;F;Voto 2018;;;2019 a 2023;Santiago del Estero
+2019;Argentina;Diputados;En contra;En contra;90;1;#3394d4;1.285714286;0;3;0;ROSANA ANDREA BERTONE;F;https://www.radiofueguina.com/2018/08/04/bertone-contra-aborto-cuestion-muy-dificil-vida/;;;2019 a 2023;Tierra del Fuego
+2019;Argentina;Diputados;Se abstiene;Se abstiene;2;0;#c9c9c9;1.142857143;0;2;0;ALEJANDRA MARIA VIGO;F;Voto 2018;;;2017 a 2021;Córdoba
+2019;Argentina;Diputados;Se abstiene;Se abstiene;2;1;#c9c9c9;1;0;1;0;ALFREDO CORNEJO;M;https://www.diariouno.com.ar/politica/cornejo-dijo-negara-votar-proyecto-aborto-legal-salvo-haya-plebiscito-08082019_BkcvypFmH;;;2019 a 2023;Mendoza

@@ -1,0 +1,15 @@
+---
+title: "Untitled"
+author: "AP"
+date: "13/8/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+library(tidyverse)
+
+mesas_totales_agrp_politica <- read.csv("120819-054029/mesas_totales_agrp_politica.dsv", sep="|")
+
+filter(mesas_totales_agrp_politica, CODIGO_AGRUPACION == 137, VOTOS_AGRUPACION == 0, CODIGO_CATEGORIA == agrupado[164,1])
+
+```
